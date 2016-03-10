@@ -40,3 +40,5 @@ RETURN
 
 ## References
 1. [Neo4J website](http://neo4j.com/), the website of the Neo4j database.
+2. [Wikipedia](https://en.wikipedia.org/wiki/Parliamentary_constituencies_in_the_Republic_of_Ireland), Saved Constituency information to "Constituency_Pop_Seats_Description" spreadsheet.
+3. [RTE.ie](http://www.rte.ie/news/election-2016/candidates/), Got the names of all candidates and their parties.
