@@ -1,7 +1,33 @@
 // cypher query to create nodes for each candidate
 
 
+// create candidates for constituency Carlow-Kilkenny (sheet 1)
 
+MATCH(c:Constituency{ name: "Carlow-Kilkenny"})
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "65.9",
+c.electorate = "107023",
+c.votesSpoiled = "505",
+c.validVotes = "70009",
+c.quota = "11669"
+
+CREATE(:Candidate {name: "John Paul Phelan", gender: "Male", party: "FG", status: "elected"}),
+(:Candidate {name: "John McGuinness", gender: "Male", party: "FF", status: "elected"}),
+(:Candidate {name: "Kathleen Funchion", gender: "Female", party: "SF", status: "elected"}),
+(:Candidate {name: "Bobby Aylward", gender: "Male", party: "FF", status: "elected"}),
+(:Candidate {name: "Pat Deering", gender: "Male", party: "FG", status: "elected"}),
+(:Candidate {name: "Jennifer Murnane O'Connor", gender: "Female", party: "FF", status: "excluded"}),
+(:Candidate {name: "David Fitzgerald", gender: "Male", party: "FG", status: "excluded"}),
+(:Candidate {name: "Ann Phelan", gender: "Female", party: "LAB", status: "excluded"}),
+(:Candidate {name: "Malcolm Noonan", gender: "Male", party: "GP", status: "excluded"}),
+(:Candidate {name: "Patrick McKee", gender: "Male", party: "RN", status: "excluded"}),
+(:Candidate {name: "Adrienne Wallace", gender: "Male", party: "AAA-PBP", status: "excluded"}),
+(:Candidate {name: "Conor MacLiam", gender: "Male", party: "AAA-PBP", status: "excluded"}),
+(:Candidate {name: "Paddy Manning", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate {name: "Keith Gilligan", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate {name: "Noel G Walsh", gender: "Male", party: "IND", status: "excluded"});
 
 
 // create candidates for constituency Meath East (sheet 33)
@@ -30,9 +56,4 @@ CREATE(:Candidate { name: "Thomas Byrne" , gender: "Male", party: "FF", status: 
 (:Candidate { name: "Séamus McDonagh", gender: "Male", party: "WP", status: "excluded" , con: "Meath East"});
 
 
-// match the candidates with the constituencies
 
-MATCH(a:Candidate), (b:Constituency)
-WHERE a.con = b.name
-CREATE (a)-[r:LIVES_IN]->(b)
-RETURN a, r, b
