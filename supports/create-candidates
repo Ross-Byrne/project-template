@@ -1,0 +1,38 @@
+// cypher query to create nodes for each candidate
+
+
+
+
+
+// create candidates for constituency Meath East (sheet 33)
+
+MATCH(c:Constituency{name: "Meath East"})
+
+SET c.seatsFilled = "3",
+c.turnoutPercent = "63.5",
+c.electorate = "65588",
+c.spoiledVotes = "240",
+c.validVotes = "41388",
+c.quota = "10348"
+
+
+CREATE(:Candidate { name: "Thomas Byrne" , gender: "Male", party: "FF", status: "elected", con: "Meath East"}),
+(:Candidate { name: "Helen McEntee", gender: "Female", party: "FG", status: "elected", con: "Meath East"}),
+(:Candidate { name: "Regina Doherty", gender: "Female", party: "FG", status: "elected", con: "Meath East"}),
+(:Candidate { name: "Darren O'Rourke", gender: "Male", party: "SF", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Joe Bonner", gender: "Male", party: "IA", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Dominic Hannigan", gender: "Male", party: "LAB", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Aisling O'Neill", gender: "Female", party: "SD", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Sharon Keogan" , gender: "Female", party: "IND", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Ben Gilroy", gender: "Male", party: "DDI", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Seán Ó Buachalla", gender: "Male", party: "GP", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Sarah Tyrrell" , gender: "Female", party: "RN", status: "excluded", con: "Meath East"}),
+(:Candidate { name: "Séamus McDonagh", gender: "Male", party: "WP", status: "excluded" , con: "Meath East"});
+
+
+// match the candidates with the constituencies
+
+MATCH(a:Candidate), (b:Constituency)
+WHERE a.con = b.name
+CREATE (a)-[r:LIVES_IN]->(b)
+RETURN a, r, b
