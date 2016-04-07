@@ -299,6 +299,34 @@ CREATE(:Candidate { name: "Richard Bruton", gender: "Male", party: "FG", status:
 
 // create candidates for constituency Dublin Bay South (sheet 11)
 
+MATCH(c:Constituency { name: "Dublin Bay South" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "54.8",
+c.electorate = "73066",
+c.spoiledVotes = "313",
+c.validVotes = "39703",
+c.quota = "7941"
+
+CREATE(:Candidate { name: "Eamon Ryan", gender: "Male", party: "GP", status: "elected", con: "Dublin Bay South" }),
+(:Candidate { name: "Eoghan Murphy", gender: "Male", party: "FG", status: "elected", con: "Dublin Bay South" }),
+(:Candidate { name: "Jim O'Callaghan", gender: "Male", party: "FF", status: "elected", con: "Dublin Bay South" }),
+(:Candidate { name: "Kate O'Connell", gender: "Female", party: "FG", status: "elected", con: "Dublin Bay South" }),
+(:Candidate { name: "Kevin Humphreys", gender: "Male", party: "LAB", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "Chris Andrews", gender: "Male", party: "SF", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "Lucinda Creighton", gender: "Female", party: "RN", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "Glenna Lynch", gender: "Female", party: "SD", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "Annette Mooney", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "Mannix Flynn", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "Alan MacStiofain", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "Eoin Tierney", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "William DJ Gorman", gender: "IND", status: "excluded", con: "Dublin Bay South" }),
+(:Candidate { name: "John Dominic Keigher", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" });
+
+
+// create candidates for constituency Dublin Central (sheet 12)
+
 
 
 // create candidates for constituency Meath East (sheet 33)
