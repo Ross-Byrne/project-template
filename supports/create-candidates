@@ -59,6 +59,41 @@ CREATE(:Candidate { name: "Caoimhghín Ó Caoláin", gender: "Female", party: "S
 (:Candidate { name: "James Mee", gender: "Male", party: "IND", status: "excluded" });
 
 
+// create candidates for constituency Clare (sheet 3)
+
+MATCH(c:Constituency{ name: "Clare" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "68.6",
+c.electorate = "83660",
+c.spoiledVotes = "407",
+c.validVotes = "57000",
+c.quota = "11401"
+
+CREATE(:Candidate { name: "Timmy Dooley", gender: "Male", party: "FF", status: "elected"}),
+(:Candidate { name: "Dr Michael Harty", gender: "Male", party: "IND", status: "elected"}),
+(:Candidate { name: "Pat Breen", gender: "Male", party: "FG", status: "elected"}),
+(:Candidate { name: "Joe Carey", gender: "Male", party: "FG", status: "elected"}),
+(:Candidate { name: "Michael McDonagh", gender: "Male", party: "FF", status: "excluded"}),
+(:Candidate { name: "Michael McNamara", gender: "Male", party: "LAB", status: "excluded"}),
+(:Candidate { name: "Noeleen Moran", gender: "Female", party: "SF", status: "excluded"}),
+(:Candidate { name: "Ann Norton", gender: "Female", party: "IND", status: "excluded"}),
+(:Candidate { name: "Clare Colleran-Molloy", gender: "Female", party: "FF", status: "excluded"}),
+(:Candidate { name: "Fergal Smith", gender: "Male", party: "GP", status: "excluded"}),
+(:Candidate { name: "Mary Howard", gender: "Female", party: "FG", status: "excluded"}),
+(:Candidate { name: "Ian Lynch", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Niamh O'Brien", gender: "Female", party: "FN", status: "excluded"}),
+(:Candidate { name: "Richard Cahill", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "André Sibo Hakizimana", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Dermot Mulqueen", gender: "Male", party: "IND", status: "excluded" });
+
+
+// create candidates for constituency Cork East (sheet 4)
+
+
+
+
 // create candidates for constituency Meath East (sheet 33)
 
 MATCH(c:Constituency{name: "Meath East"})
