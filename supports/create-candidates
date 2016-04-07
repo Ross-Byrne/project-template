@@ -327,6 +327,36 @@ CREATE(:Candidate { name: "Eamon Ryan", gender: "Male", party: "GP", status: "el
 
 // create candidates for constituency Dublin Central (sheet 12)
 
+MATCH(c:Constituency { name: "Dublin Central" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "52.4",
+c.electorate = "45747",
+c.spoiledVotes = "304",
+c.validVotes = "23686",
+c.quota = "5922"
+
+CREATE(:Candidate { name: "Mary Lou McDonald", gender: "Female", party: "SF", status: "elected", con: "Dublin Central" }),
+(:Candidate { name: "Paschal Donohoe", gender: "Male", party: "FG", status: "elected", con: "Dublin Central" }),
+(:Candidate { name: "Maureen O'Sullivan", gender: "Female", party: "IND", status: "elected", con: "Dublin Central" }),
+(:Candidate { name: "Gary Gannon", gender: "Male", party: "SD", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Christy Burke", gender: "Male", party: "IND", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Mary Fitzpatrick", gender: "Female", party: "FF", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Joe Costello", gender: "Male", party: "LAB", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Cieran Perry", gender: "Male", party: "IND", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Diana O'Dwyer", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Ian Noel Smyth", gender: "Male", party: "GP", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Jacqui Gilbourne", gender: "Female", party: "RN", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Éilis Ryan", gender: "Female", party: "WP", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Cormac McKay", gender: "Male", party: "DDI", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "Kerry Guinan", gender: "Female", party: "IND", status: "excluded", con: "Dublin Central" }),
+(:Candidate { name: "William DJ Gorman", gender: "Male", party: "IND", status: "excluded", con: "Dublin Central" });
+
+
+// create candidates for constituency Dublin Fingal (sheet 13)
+
+
 
 
 // create candidates for constituency Meath East (sheet 33)
