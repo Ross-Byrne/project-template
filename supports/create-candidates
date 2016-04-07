@@ -356,6 +356,35 @@ CREATE(:Candidate { name: "Mary Lou McDonald", gender: "Female", party: "SF", st
 
 // create candidates for constituency Dublin Fingal (sheet 13)
 
+MATCH(c:Constituency { name: "Dublin Fingal" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "65.1",
+c.electorate = "93486",
+c.spoiledVotes = "462",
+c.validVotes = "60388",
+c.quota = "10065"
+
+CREATE(:Candidate { name: "Darragh O'Brien", gender: "Male", party: "FF", status: "elected", con: "Dublin Fingal" }),
+(:Candidate { name: "Clare Daly", gender: "Female", party: "IND", status: "elected", con: "Dublin Fingal" }),
+(:Candidate { name: "Alan Farrell", gender: "Male", party: "FG", status: "elected", con: "Dublin Fingal" }),
+(:Candidate { name: "Brendan Ryan", gender: "Male", party: "LAB", status: "elected", con: "Dublin Fingal" }),
+(:Candidate { name: "Louise O'Reilly", gender: "Female", party: "SF", status: "elected", con: "Dublin Fingal" }),
+(:Candidate { name: "James Reilly", gender: "Male", party: "FG", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Lorraine Clifford-Lee", gender: "Female", party: "FF", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Barry Martin", gender: "Male", party: "IND", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Joe O'Brien", gender: "Male", party: "GP", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Tony Murphy", gender: "Male", party: "IA", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Gerry Molloy", gender: "RN", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Terry Kelleher", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Roslyn Fuller", gender: "Female", party: "IND", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Marcus De Brun", gender: "Male", party: "IND", status: "excluded", con: "Dublin Fingal" }),
+(:Candidate { name: "Fergal O'Connell", gender: "Male", party: "IND", status: "excluded", con: "Dublin Fingal" });
+
+
+// create candidates for constituency Dublin Mid-West (sheet 14)
+
 
 
 
