@@ -91,6 +91,35 @@ CREATE(:Candidate { name: "Timmy Dooley", gender: "Male", party: "FF", status: "
 
 // create candidates for constituency Cork East (sheet 4)
 
+MATCH(c:Constituency{ name: "Cork East" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "64",
+c.electorate = "83236",
+c.spoiledVotes = "445",
+c.validVotes = "52806",
+c.quota = "10562"
+
+CREATE(:Candidate { name: "Sean Sherlock", gender: "Male", party: "LAB", status: "elected"}),
+(:Candidate { name: "David Stanton", gender: "Male", party: "FG", status: "elected"}),
+(:Candidate { name: "Kevin O'Keeffe", gender: "Male", party: "FF", status: "elected"}),
+(:Candidate { name: "Pat Buckley", gender: "Male", party: "SF", status: "elected"}),
+(:Candidate { name: "Barbara Ahern", gender: "Female", party: "FF", status: "excluded"}),
+(:Candidate { name: "Noel McCarthy", gender: "Female", party: "FG", status: "excluded"}),
+(:Candidate { name: "Paul Bradford", gender: "Male", party: "RN", status: "excluded"}),
+(:Candidate { name: "Mary Linehan Foley", gender: "Female", party: "IND", status: "excluded"}),
+(:Candidate { name: "Tom Barry", gender: "Male", party: "FG", status: "excluded"}),
+(:Candidate { name: "Ciara Leonardi Roche", gender: "Female", party: "AAA-PBP", status: "excluded"}),
+(:Candidate { name: "Kieran McCarthy", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Ken Curtin", gender: "Male", party: "SD", status: "excluded"}),
+(:Candidate { name: "Natasha Harty", gender: "Female", party: "GP", status: "excluded"}),
+(:Candidate { name: "Paddy Bullman", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Ross Cannon", gender: "Male", party: "IND", status: "excluded" });
+
+
+// create candidates for constituency Cork North-Central (sheet 5)
+
 
 
 
