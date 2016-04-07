@@ -233,6 +233,40 @@ CREATE(:Candidate { name: "Margaret Murphy-O'Mahony", gender: "Female", party: "
 (:Candidate { name: "Fiona Pettit O'Leary", gender: "Female", party: "IND", status: "excluded", con: "Cork South-West" });
 
 
+// create candidates for constituency Donegal (sheet 9)
+
+MATCH(c:Constituency{ name: "Donegal" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "62.8",
+c.electorate = "117675",
+c.spoiledVotes = "654",
+c.validVotes = "73303",
+c.quota = "12218"
+
+CREATE(:Candidate { name: "Pearse Doherty", gender: "Male", party: "SF", status: "elected", con: "Donegal" }),
+(:Candidate { name: "Pat the Cope Gallagher", gender: "Male", party: "FF", status: "elected", con: "Donegal" }),
+(:Candidate { name: "Charlie McConalogue", gender: "Male", party: "FF", status: "elected", con: "Donegal" }),
+(:Candidate { name: "Joe McHugh", gender: "Male", party: "FG", status: "elected", con: "Donegal" }),
+(:Candidate { name: "Thomas Pringle", gender: "Male", party: "IND", status: "elected", con: "Donegal" }),
+(:Candidate { name: "Pádraig MacLochlainn", gender: "Male", party: "SF", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Tim Jackson", gender: "Male", party: "IND", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Dessie Shiels", gender: "Male", party: "IND", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Gary Doherty", gender: "Male", party: "SF", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Paddy Harte", gender: "Male", party: "FG", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Niamh Kennedy", gender: "Female", party: "IA", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Frank McBrearty Jr", gender: "Male", party: "IND", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Ian McGarvey", gender: "Male", party: "IND", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Paula Flanagan", gender: "Female", party: "GP", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Michael Mooney", gender: "Male", party: "IND", status: "excluded", con: "Donegal" }),
+(:Candidate { name: "Cordelia Nic Fhearraigh", gender: "Female", party: "FN", status: "excluded", con: "Donegal" });
+
+
+// create candidates for constituency Dublin Bay North (sheet 10)
+
+
+
 
 // create candidates for constituency Meath East (sheet 33)
 
