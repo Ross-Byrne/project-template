@@ -462,6 +462,34 @@ CREATE(:Candidate { name: "Shane Ross", gender: "Male", party: "IA", status: "el
 
 // create candidates for constituency Dublin South-Central (sheet 17)
 
+MATCH(c:Constituency { name: "Dublin South-Central" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "58.1",
+c.electorate = "74942",
+c.spoiledVotes = "694",
+c.validVotes = "42857",
+c.quota = "8572"
+
+CREATE(:Candidate { name: "Catherine Byrne", gender: "Female", party: "FG", status: "elected", con: "Dublin South-Central" }),
+(:Candidate { name: "Aengus Ó Snodaigh", gender: "Male", party: "SF", status: "elected", con: "Dublin South-Central" }),
+(:Candidate { name: "Joan Collins", gender: "Female", party: "IND", status: "elected", con: "Dublin South-Central" }),
+(:Candidate { name: "Bríd Smith", gender: "Female", party: "AAA-PBP", status: "elected", con: "Dublin South-Central" }),
+(:Candidate { name: "Catherine Ardagh", gender: "Female", party: "FF", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Eric Byrne", gender: "Male", party: "LAB", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Máire Devine", gender: "Female", party: "SF", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Liam Coyne", gender: "Male", party: "SD", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Paul Hand", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Oisín Ó hAlmhain", gender: "Male", party: "GP", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Michael Gargan", gender: "Male", party: "RN", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Neville Bradley", gender: "Male", party: "DDI", status: "excluded", con: "Dublin South-Central" }),
+(:Candidate { name: "Richard Murray", gender: "Male", party: "IND", status: "excluded" , con: "Dublin South-Central" });
+
+
+// create candidates for constituency Dublin South-West (sheet 18)
+
+
 
 // create candidates for constituency Meath East (sheet 33)
 
