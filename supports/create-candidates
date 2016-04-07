@@ -489,6 +489,41 @@ CREATE(:Candidate { name: "Catherine Byrne", gender: "Female", party: "FG", stat
 
 // create candidates for constituency Dublin South-West (sheet 18)
 
+MATCH(c:Constituency { name: "Dublin South-West" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "64.4",
+c.electorate = "105420",
+c.spoiledVotes = "647",
+c.validVotes = "67271",
+c.quota = "11212"
+
+CREATE(:Candidate { name: "Paul Murphy", gender: "Male", party: "AAA-PBP", status: "elected", con: "Dublin South-West" }),
+(:Candidate { name: "John Lahart", gender: "Male", party: "FF", status: "elected", con: "Dublin South-West" }),
+(:Candidate { name: "Seán Crowe", gender: "Male", party: "SF", status: "elected", con: "Dublin South-West" }),
+(:Candidate { name: "Colm Brophy", gender: "Male", party: "FG", status: "elected", con: "Dublin South-West" }),
+(:Candidate { name: "Katherine Zappone", gender: "Female", party: "IND", status: "elected", con: "Dublin South-West" }),
+(:Candidate { name: "Anne-Marie Dermody", gender: "Female", party: "FG", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Peter Fitzpatrick", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Pamela Kearns", gender: "Female", party: "LAB", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Sandra Fay", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Ronan McMahon", gender: "Male", party: "RN", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Sarah Holland", gender: "Female", party: "SF", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Deirdre O'Donovan", gender: "Female", party: "IA", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Mick Duff", gender: "Male", party: "LAB", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Eamonn Maloney", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Francis Duffy", gender: "Male", party: "GP", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Karen Warren", gender: "Female", party: "FG", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Declan Burke", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Stephen Sinclair", gender: "Male", party: "DDI", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Kieran Adam Quigley", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Joan Summerville Molloy", gender: "Female", party: "IND", status: "excluded", con: "Dublin South-West" }),
+(:Candidate { name: "Frank O'Gorman", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" });
+
+
+// create candidates for constituency Dublin West (sheet 19)
+
 
 
 // create candidates for constituency Meath East (sheet 33)
