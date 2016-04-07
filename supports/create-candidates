@@ -265,6 +265,39 @@ CREATE(:Candidate { name: "Pearse Doherty", gender: "Male", party: "SF", status:
 
 // create candidates for constituency Dublin Bay North (sheet 10)
 
+MATCH(c:Constituency{ name: "Dublin Bay North" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "67.9",
+c.electorate = "109516",
+c.spoiledVotes = "709",
+c.validVotes = "73625",
+c.quota = "12271"
+
+CREATE(:Candidate { name: "Richard Bruton", gender: "Male", party: "FG", status: "elected", con: "Dublin Bay North" }),
+(:Candidate { name: "Seán Haughey", gender: "Male", party: "FF", status: "elected", con: "Dublin Bay North" }),
+(:Candidate { name: "Tommy Broughan", gender: "Male", party: "IND", status: "elected", con: "Dublin Bay North" }),
+(:Candidate { name: "Denise Mitchell", gender: "Female", party: "SF", status: "elected", con: "Dublin Bay North" }),
+(:Candidate { name: "Finian McGrath", gender: "Male", party: "IA", status: "elected", con: "Dublin Bay North" }),
+(:Candidate { name: "Aodhán Ó Ríordáin", gender: "Male", party: "LAB", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "John Lyons", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Averil Power", gender: "Female", party: "IND", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Cian O'Callaghan", gender: "Male", party: "SD", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Deirdre Heney", gender: "Female", party: "FF", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Mícheál MacDonncha", gender: "Male", party: "SF", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Terence Flanagan", gender: "Male", party: "RN", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Naoise Ó Muiri", gender: "Male", party: "FG", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Michael O'Brien", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Stephanie Regan", gender: "Female", party: "FG", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Damien O'Neill", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Donna Cooney", gender: "Female", party: "GP", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Jimmy Guerin", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Paul Clarke", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay North" }),
+(:Candidate { name: "Proinsias Ó Conaráin", gender: "Male", party: "IND", status: "excluded" , con: "Dublin Bay North" });
+
+
+// create candidates for constituency Dublin Bay South (sheet 11)
 
 
 
