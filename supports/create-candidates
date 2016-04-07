@@ -13,21 +13,22 @@ c.votesSpoiled = "505",
 c.validVotes = "70009",
 c.quota = "11669"
 
-CREATE(:Candidate {name: "John Paul Phelan", gender: "Male", party: "FG", status: "elected"}),
-(:Candidate {name: "John McGuinness", gender: "Male", party: "FF", status: "elected"}),
-(:Candidate {name: "Kathleen Funchion", gender: "Female", party: "SF", status: "elected"}),
-(:Candidate {name: "Bobby Aylward", gender: "Male", party: "FF", status: "elected"}),
-(:Candidate {name: "Pat Deering", gender: "Male", party: "FG", status: "elected"}),
-(:Candidate {name: "Jennifer Murnane O'Connor", gender: "Female", party: "FF", status: "excluded"}),
-(:Candidate {name: "David Fitzgerald", gender: "Male", party: "FG", status: "excluded"}),
-(:Candidate {name: "Ann Phelan", gender: "Female", party: "LAB", status: "excluded"}),
-(:Candidate {name: "Malcolm Noonan", gender: "Male", party: "GP", status: "excluded"}),
-(:Candidate {name: "Patrick McKee", gender: "Male", party: "RN", status: "excluded"}),
-(:Candidate {name: "Adrienne Wallace", gender: "Male", party: "AAA-PBP", status: "excluded"}),
-(:Candidate {name: "Conor MacLiam", gender: "Male", party: "AAA-PBP", status: "excluded"}),
-(:Candidate {name: "Paddy Manning", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate {name: "Keith Gilligan", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate {name: "Noel G Walsh", gender: "Male", party: "IND", status: "excluded"});
+CREATE(:Candidate { name: "John Paul Phelan", gender: "Male", party: "FG", status: "elected", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "John McGuinness", gender: "Male", party: "FF", status: "elected",con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Kathleen Funchion", gender: "Female", party: "SF", status: "elected", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Bobby Aylward", gender: "Male", party: "FF", status: "elected", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Pat Deering", gender: "Male", party: "FG", status: "elected", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Jennifer Murnane O'Connor", gender: "Female", party: "FF", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "David Fitzgerald", gender: "Male", party: "FG", status: "excluded",con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Ann Phelan", gender: "Female", party: "LAB", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Malcolm Noonan", gender: "Male", party: "GP", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Patrick McKee", gender: "Male", party: "RN", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Adrienne Wallace", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Conor MacLiam", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Paddy Manning", gender: "Male", party: "IND", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Keith Gilligan", gender: "Male", party: "IND", status: "excluded", con: "Carlow-Kilkenny"}),
+(:Candidate { name: "Noel G Walsh", gender: "Male", party: "IND", status: "excluded", con: "Carlow-Kilkenny"});
+
 
 
 // create candidates for constituency Cavan-Monaghan (sheet 2)
@@ -42,21 +43,22 @@ c.spoiledVotes = "598",
 c.validVotes = "59650",
 c.quota = "11931"
 
-CREATE(:Candidate { name: "Caoimhghín Ó Caoláin", gender: "Female", party: "SF", status: "elected"}),
-(:Candidate { name: "Heather Humphreys", gender: "Female", party: "FG", status: "elected"}),
-(:Candidate { name: "Brendan Smith", gender: "Male", party: "FF", status: "elected"}),
-(:Candidate { name: "Niamh Smyth", gender: "Female", party: "FF", status: "elected"}),
-(:Candidate { name: "Joe O'Reilly", gender: "Male", party: "FG", status: "excluded"}),
-(:Candidate { name: "Kathryn Reilly", gender: "Female", party: "SF", status: "excluded"}),
-(:Candidate { name: "Mike Durkan", gender: "Male", party: "FF", status: "excluded"}),
-(:Candidate { name: "Mary Smyth", gender: "Female", party: "IND", status: "excluded"}),
-(:Candidate { name: "Sean Conlan", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Micheál Callaghan", gender: "Male", party: "GP", status: "excluded"}),
-(:Candidate { name: "John Wilson", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Michael McDermott", gender: "Male", party: "DDI", status: "excluded"}),
-(:Candidate { name: "Aoife O'Connell", gender: "Female", party: "DDI", status: "excluded"}),
-(:Candidate { name: "Emmett Smith", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "James Mee", gender: "Male", party: "IND", status: "excluded" });
+CREATE(:Candidate { name: "Caoimhghín Ó Caoláin", gender: "Female", party: "SF", status: "elected", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Heather Humphreys", gender: "Female", party: "FG", status: "elected", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Brendan Smith", gender: "Male", party: "FF", status: "elected", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Niamh Smyth", gender: "Female", party: "FF", status: "elected", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Joe O'Reilly", gender: "Male", party: "FG", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Kathryn Reilly", gender: "Female", party: "SF", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Mike Durkan", gender: "Male", party: "FF", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Mary Smyth", gender: "Female", party: "IND", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Sean Conlan", gender: "Male", party: "IND", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Micheál Callaghan", gender: "Male", party: "GP", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "John Wilson", gender: "Male", party: "IND", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Michael McDermott", gender: "Male", party: "DDI", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Aoife O'Connell", gender: "Female", party: "DDI", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "Emmett Smith", gender: "Male", party: "IND", status: "excluded", con: "Cavan-Monaghan"}),
+(:Candidate { name: "James Mee", gender: "Male", party: "IND", status: "excluded" , con: "Cavan-Monaghan"});
+
 
 
 // create candidates for constituency Clare (sheet 3)
@@ -71,22 +73,23 @@ c.spoiledVotes = "407",
 c.validVotes = "57000",
 c.quota = "11401"
 
-CREATE(:Candidate { name: "Timmy Dooley", gender: "Male", party: "FF", status: "elected"}),
-(:Candidate { name: "Dr Michael Harty", gender: "Male", party: "IND", status: "elected"}),
-(:Candidate { name: "Pat Breen", gender: "Male", party: "FG", status: "elected"}),
-(:Candidate { name: "Joe Carey", gender: "Male", party: "FG", status: "elected"}),
-(:Candidate { name: "Michael McDonagh", gender: "Male", party: "FF", status: "excluded"}),
-(:Candidate { name: "Michael McNamara", gender: "Male", party: "LAB", status: "excluded"}),
-(:Candidate { name: "Noeleen Moran", gender: "Female", party: "SF", status: "excluded"}),
-(:Candidate { name: "Ann Norton", gender: "Female", party: "IND", status: "excluded"}),
-(:Candidate { name: "Clare Colleran-Molloy", gender: "Female", party: "FF", status: "excluded"}),
-(:Candidate { name: "Fergal Smith", gender: "Male", party: "GP", status: "excluded"}),
-(:Candidate { name: "Mary Howard", gender: "Female", party: "FG", status: "excluded"}),
-(:Candidate { name: "Ian Lynch", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Niamh O'Brien", gender: "Female", party: "FN", status: "excluded"}),
-(:Candidate { name: "Richard Cahill", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "André Sibo Hakizimana", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Dermot Mulqueen", gender: "Male", party: "IND", status: "excluded" });
+CREATE(:Candidate { name: "Timmy Dooley", gender: "Male", party: "FF", status: "elected", con: "Clare"}),
+(:Candidate { name: "Dr Michael Harty", gender: "Male", party: "IND", status: "elected", con: "Clare"}),
+(:Candidate { name: "Pat Breen", gender: "Male", party: "FG", status: "elected", con: "Clare"}),
+(:Candidate { name: "Joe Carey", gender: "Male", party: "FG", status: "elected", con: "Clare"}),
+(:Candidate { name: "Michael McDonagh", gender: "Male", party: "FF", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Michael McNamara", gender: "Male", party: "LAB", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Noeleen Moran", gender: "Female", party: "SF", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Ann Norton", gender: "Female", party: "IND", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Clare Colleran-Molloy", gender: "Female", party: "FF", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Fergal Smith", gender: "Male", party: "GP", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Mary Howard", gender: "Female", party: "FG", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Ian Lynch", gender: "Male", party: "IND", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Niamh O'Brien", gender: "Female", party: "FN", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Richard Cahill", gender: "Male", party: "IND", status: "excluded", con: "Clare"}),
+(:Candidate { name: "André Sibo Hakizimana", gender: "Male", party: "IND", status: "excluded", con: "Clare"}),
+(:Candidate { name: "Dermot Mulqueen", gender: "Male", party: "IND", status: "excluded" , con: "Clare"});
+
 
 
 // create candidates for constituency Cork East (sheet 4)
@@ -101,21 +104,22 @@ c.spoiledVotes = "445",
 c.validVotes = "52806",
 c.quota = "10562"
 
-CREATE(:Candidate { name: "Sean Sherlock", gender: "Male", party: "LAB", status: "elected"}),
-(:Candidate { name: "David Stanton", gender: "Male", party: "FG", status: "elected"}),
-(:Candidate { name: "Kevin O'Keeffe", gender: "Male", party: "FF", status: "elected"}),
-(:Candidate { name: "Pat Buckley", gender: "Male", party: "SF", status: "elected"}),
-(:Candidate { name: "Barbara Ahern", gender: "Female", party: "FF", status: "excluded"}),
-(:Candidate { name: "Noel McCarthy", gender: "Female", party: "FG", status: "excluded"}),
-(:Candidate { name: "Paul Bradford", gender: "Male", party: "RN", status: "excluded"}),
-(:Candidate { name: "Mary Linehan Foley", gender: "Female", party: "IND", status: "excluded"}),
-(:Candidate { name: "Tom Barry", gender: "Male", party: "FG", status: "excluded"}),
-(:Candidate { name: "Ciara Leonardi Roche", gender: "Female", party: "AAA-PBP", status: "excluded"}),
-(:Candidate { name: "Kieran McCarthy", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Ken Curtin", gender: "Male", party: "SD", status: "excluded"}),
-(:Candidate { name: "Natasha Harty", gender: "Female", party: "GP", status: "excluded"}),
-(:Candidate { name: "Paddy Bullman", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Ross Cannon", gender: "Male", party: "IND", status: "excluded" });
+CREATE(:Candidate { name: "Sean Sherlock", gender: "Male", party: "LAB", status: "elected", con: "Cork East"}),
+(:Candidate { name: "David Stanton", gender: "Male", party: "FG", status: "elected", con: "Cork East"}),
+(:Candidate { name: "Kevin O'Keeffe", gender: "Male", party: "FF", status: "elected", con: "Cork East"}),
+(:Candidate { name: "Pat Buckley", gender: "Male", party: "SF", status: "elected", con: "Cork East"}),
+(:Candidate { name: "Barbara Ahern", gender: "Female", party: "FF", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Noel McCarthy", gender: "Female", party: "FG", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Paul Bradford", gender: "Male", party: "RN", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Mary Linehan Foley", gender: "Female", party: "IND", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Tom Barry", gender: "Male", party: "FG", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Ciara Leonardi Roche", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Kieran McCarthy", gender: "Male", party: "IND", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Ken Curtin", gender: "Male", party: "SD", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Natasha Harty", gender: "Female", party: "GP", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Paddy Bullman", gender: "Male", party: "IND", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Ross Cannon", gender: "Male", party: "IND", status: "excluded" , con: "Cork East"});
+
 
 
 // create candidates for constituency Cork North-Central (sheet 5)
@@ -130,23 +134,52 @@ c.spoiledVotes = "516",
 c.validVotes = "51174",
 c.quota = "10235"
 
-CREATE(:Candidate { name: "Billy Kelleher", gender: "Male", party: "FF", status: "elected"}),
-(:Candidate { name: "Jonathan O'Brien", gender: "Male", party: "SF", status: "elected"}),
-(:Candidate { name: "Mick Barry", gender: "Male", party: "AAA-PBP", status: "elected"}),
-(:Candidate { name: "Dara Murphy", gender: "Male", party: "FG", status: "elected"}),
-(:Candidate { name: "Kathleen Lynch", gender: "Female", party: "LAB", status: "excluded"}),
-(:Candidate { name: "Julie O'Leary", gender: "Female", party: "FG", status: "excluded"}),
-(:Candidate { name: "Thomas Gould", gender: "Male", party: "SF", status: "excluded"}),
-(:Candidate { name: "Oliver Moran", gender: "Male", party: "GP", status: "excluded"}),
-(:Candidate { name: "Ted Tynan", gender: "Male", party: "WP", status: "excluded"}),
-(:Candidate { name: "Paddy O'Leary", gender: "Male", party: "RN", status: "excluded"}),
-(:Candidate { name: "Ger Keohane", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Thomas Kiely", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Mick Murphy", gender: "Male", party: "IND", status: "excluded"}),
-(:Candidate { name: "Peter O'Loughlin", gender: "Male", party: "IND", status: "excluded"});
+CREATE(:Candidate { name: "Billy Kelleher", gender: "Male", party: "FF", status: "elected", con: "Cork North-Central"}),
+(:Candidate { name: "Jonathan O'Brien", gender: "Male", party: "SF", status: "elected", con: "Cork North-Central"}),
+(:Candidate { name: "Mick Barry", gender: "Male", party: "AAA-PBP", status: "elected", con: "Cork North-Central"}),
+(:Candidate { name: "Dara Murphy", gender: "Male", party: "FG", status: "elected", con: "Cork North-Central"}),
+(:Candidate { name: "Kathleen Lynch", gender: "Female", party: "LAB", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Julie O'Leary", gender: "Female", party: "FG", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Thomas Gould", gender: "Male", party: "SF", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Oliver Moran", gender: "Male", party: "GP", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Ted Tynan", gender: "Male", party: "WP", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Paddy O'Leary", gender: "Male", party: "RN", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Ger Keohane", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Thomas Kiely", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Mick Murphy", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"}),
+(:Candidate { name: "Peter O'Loughlin", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"});
+
 
 
 // create candidates for constituency Cork North-West (sheet 6)
+
+MATCH(c:Constituency{ name: "Cork North-West" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "70.1",
+c.electorate = "67589",
+c.spoiledVotes = "395",
+c.validVotes = "46958",
+c.quota = "11740"
+
+CREATE(:Candidate { name: "Michael Creed", gender: "Male", party: "FG", status: "elected", con: "Cork North-West"}),
+(:Candidate { name: "Aindrias Moynihan", gender: "Male", party: "FF", status: "elected", con: "Cork North-West"}),
+(:Candidate { name: "Michael Moynihan", gender: "Male", party: "FF", status: "elected", con: "Cork North-West"}),
+(:Candidate { name: "John Paul O'Shea", gender: "Male", party: "IND", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Áine Collins", gender: "Female", party: "FG", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Nigel Dennehy", gender: "Male", party: "SF", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Diarmuid O'Flynn", gender: "Male", party: "IA", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Jason Fitzgerald", gender: "Male", party: "RN", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Steven O'Riordan", gender: "Male", party: "IND", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Cormac Manning", gender: "Male", party: "GP", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Jerry O'Sullivan", gender: "Male", party: "IND", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Shirley Griffin", gender: "Female", party: "IND", status: "excluded", con: "Cork North-West"}),
+(:Candidate { name: "Michael O'Donnell", gender: "Male", party: "CPI", status: "excluded", con: "Cork North-West"});
+
+
+// create candidates for constituency Cork South-Central (sheet 7)
+
 
 
 
