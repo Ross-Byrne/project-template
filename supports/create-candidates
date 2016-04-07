@@ -109,7 +109,7 @@ CREATE(:Candidate { name: "Sean Sherlock", gender: "Male", party: "LAB", status:
 (:Candidate { name: "Kevin O'Keeffe", gender: "Male", party: "FF", status: "elected", con: "Cork East"}),
 (:Candidate { name: "Pat Buckley", gender: "Male", party: "SF", status: "elected", con: "Cork East"}),
 (:Candidate { name: "Barbara Ahern", gender: "Female", party: "FF", status: "excluded", con: "Cork East"}),
-(:Candidate { name: "Noel McCarthy", gender: "Female", party: "FG", status: "excluded", con: "Cork East"}),
+(:Candidate { name: "Noel McCarthy", gender: "Male", party: "FG", status: "excluded", con: "Cork East"}),
 (:Candidate { name: "Paul Bradford", gender: "Male", party: "RN", status: "excluded", con: "Cork East"}),
 (:Candidate { name: "Mary Linehan Foley", gender: "Female", party: "IND", status: "excluded", con: "Cork East"}),
 (:Candidate { name: "Tom Barry", gender: "Male", party: "FG", status: "excluded", con: "Cork East"}),
@@ -119,6 +119,7 @@ CREATE(:Candidate { name: "Sean Sherlock", gender: "Male", party: "LAB", status:
 (:Candidate { name: "Natasha Harty", gender: "Female", party: "GP", status: "excluded", con: "Cork East"}),
 (:Candidate { name: "Paddy Bullman", gender: "Male", party: "IND", status: "excluded", con: "Cork East"}),
 (:Candidate { name: "Ross Cannon", gender: "Male", party: "IND", status: "excluded" , con: "Cork East"});
+
 
 
 
@@ -208,6 +209,28 @@ CREATE(:Candidate { name: "Michael McGrath", gender: "Male", party: "FF", status
 
 
 // create candidates for constituency Cork South-West (sheet 8)
+
+MATCH(c:Constituency{ name: "Cork South-West" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "68.6",
+c.electorate = "63583",
+c.spoiledVotes = "331",
+c.validVotes = "43258",
+c.quota = "10815"
+
+CREATE(:Candidate { name: "Margaret Murphy-O'Mahony", gender: "Female", party: "FF", status: "elected", con: "Cork South-West" }),
+(:Candidate { name: "Michael Collins", gender: "Male", party: "IND", status: "elected", con: "Cork South-West" }),
+(:Candidate { name: "Jim Daly", gender: "Male", party: "FG", status: "elected", con: "Cork South-West" }),
+(:Candidate { name: "Noel Harrington", gender: "Male", party: "FG", status: "excluded", con: "Cork South-West" }),
+(:Candidate { name: "Alan Coleman", gender: "Male", party: "IND", status: "excluded", con: "Cork South-West" }),
+(:Candidate { name: "Rachel McCarthy", gender: "Female", party: "SF", status: "excluded", con: "Cork South-West" }),
+(:Candidate { name: "Michael McCarthy", gender: "Male", party: "LAB", status: "excluded", con: "Cork South-West" }),
+(:Candidate { name: "Johnny O'Mahony", gender: "Male", party: "GP", status: "excluded", con: "Cork South-West" }),
+(:Candidate { name: "Gillian Powell", gender: "Female", party: "IND", status: "excluded", con: "Cork South-West" }),
+(:Candidate { name: "Theresa Heaney", gender: "Female", party: "CD", status: "excluded", con: "Cork South-West" }),
+(:Candidate { name: "Fiona Pettit O'Leary", gender: "Female", party: "IND", status: "excluded", con: "Cork South-West" });
 
 
 
