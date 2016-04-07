@@ -549,6 +549,33 @@ CREATE(:Candidate { name: "Leo Varadkar", gender: "Male", party: "FG", status: "
 
 // create candidates for constituency Dún Laoghaire (sheet 20)
 
+MATCH(c:Constituency { name: "Dún Laoghaire" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "64.7",
+c.electorate = "92248",
+c.spoiledVotes = "401",
+c.validVotes = "59238",
+c.quota = "14810"
+
+CREATE(:Candidate { name: "Richard Boyd-Barrett", gender: "Male", party: "AAA-PBP", status: "elected", con: "Dún Laoghaire" }),
+(:Candidate { name: "Sean Barrett", gender: "Male", party: "FG", status: "elected", con: "Dún Laoghaire" }),
+(:Candidate { name: "Maria Bailey", gender: "Female", party: "FG", status: "elected", con: "Dún Laoghaire" }),
+(:Candidate { name: "Mary Mitchell O'Connor", gender: "Female", party: "FG", status: "elected", con: "Dún Laoghaire" }),
+(:Candidate { name: "Mary Hanafin", gender: "Female", party: "FF", status: "excluded", con: "Dún Laoghaire" }),
+(:Candidate { name: "Carrie Smyth", gender: "Female", party: "LAB", status: "excluded", con: "Dún Laoghaire" }),
+(:Candidate { name: "Cormac Devlin", gender: "Male", party: "FF", status: "excluded", con: "Dún Laoghaire" }),
+(:Candidate { name: "Ossian Smyth", gender: "Male", party: "GP", status: "excluded", con: "Dún Laoghaire" }),
+(:Candidate { name: "Carol Hunt", gender: "Female", party: "IA", status: "excluded", con: "Dún Laoghaire" }),
+(:Candidate { name: "Shane O'Brien", gender: "Male", party: "SF", status: "excluded", con: "Dún Laoghaire" }),
+(:Candidate { name: "Frank Cronin", gender: "Male", party: "RN", status: "excluded", con: "Dún Laoghaire" }),
+(:Candidate { name: "Raymond Whitehead", gender: "Male", party: "DDI", status: "excluded", con: "Dún Laoghaire" });
+
+
+// create candidates for constituency Galway East (sheet 21)
+
+
 
 
 // create candidates for constituency Meath East (sheet 33)
