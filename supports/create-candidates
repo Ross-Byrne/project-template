@@ -180,6 +180,34 @@ CREATE(:Candidate { name: "Michael Creed", gender: "Male", party: "FG", status: 
 
 // create candidates for constituency Cork South-Central (sheet 7)
 
+MATCH(c:Constituency{ name: "Cork South-Central" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "66.4",
+c.electorate = "84482",
+c.spoiledVotes = "404",
+c.validVotes = "55682",
+c.quota = "11137"
+
+CREATE(:Candidate { name: "Michael McGrath", gender: "Male", party: "FF", status: "elected", con: "Cork South-Central"}),
+(:Candidate { name: "Micheál Martin", gender: "Male", party: "FF", status: "elected", con: "Cork South-Central"}),
+(:Candidate { name: "Donnchadh Ó Laoghaire", gender: "Male", party: "SF", status: "elected", con: "Cork South-Central"}),
+(:Candidate { name: "Simon Coveney", gender: "Male", party: "FG", status: "elected", con: "Cork South-Central"}),
+(:Candidate { name: "Jerry Buttimer", gender: "Male", party: "FG", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Mick Finn", gender: "Male", party: "IA", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Lorna Bogue", gender: "Female", party: "GP", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Ciarán Lynch", gender: "Male", party: "LAB", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Fiona Ryan", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Diarmaid Ó Cadhla", gender: "Male", party: "IND", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Ciaran Kenneally", gender: "Male", party: "RN", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Jim O'Connell", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Joe Harris", gender: "Male", party: "IND", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Elizabeth Hourihane", gender: "Female", party: "IND", status: "excluded", con: "Cork South-Central"}),
+(:Candidate { name: "Michael Mohally", gender: "Male", party: "IND", status: "excluded", con: "Cork South-Central" });
+
+
+// create candidates for constituency Cork South-West (sheet 8)
 
 
 
