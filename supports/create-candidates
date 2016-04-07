@@ -385,6 +385,34 @@ CREATE(:Candidate { name: "Darragh O'Brien", gender: "Male", party: "FF", status
 
 // create candidates for constituency Dublin Mid-West (sheet 14)
 
+MATCH(	c:Constituency	 { name: “Dublin Mid-West” })
+		
+SET		
+c.seatsFIlled = 	“4”	,
+c.turnoutPercent = 	“62.8”	,
+c.electorate = 	“69388”	,
+c.spoiledVotes = 	“446”	,
+c.validVotes = 	“43104”	,
+c.quota = 	“8621”	
+		
+CREATE(:Candidate { name: “	Eoin Ó Broin”, gender: “Male”, party: “SF”, status: “elected”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	John Curran”, gender: “Male”, party: “FF”, status: “elected”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Frances Fitzgerald”, gender: “Male”, party: “FG”, status: “elected”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Gino Kenny”, gender: “Male”, party: “AAA-PBP”, status: “elected”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Anne-Marie McNally”, gender: “Female”, party: “SD”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Derek Keating”, gender: “Male”, party: “FG”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Paul Gogarty”, gender: “Male”, party: “IA”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Joanna Tuffy”, gender: “Female”, party: “LAB”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Francis Timmons”, gender: “Male”, party: “IND”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Lorraine Hennessy”, gender: “Female”, party: “WP”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Tom Kivlehan”, gender: “Male”, party: “GP”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Clare Leonard”, gender: “Female”, party: “IND”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Patrick Akpoveta”, gender: “Male”, party: “IND”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Haroon Khan”, gender: “Male”, party: “IND”, status: “excluded”	, con: “Dublin Mid-West” }),
+(:Candidate { name: “	Christopher Healy”, gender: “Male”, party: “DDI”, status: “excluded“	, con: “Dublin Mid-West” });
+
+
+// create candidates for constituency Dublin North-West (sheet 15)
 
 
 
