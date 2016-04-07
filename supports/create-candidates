@@ -30,6 +30,35 @@ CREATE(:Candidate {name: "John Paul Phelan", gender: "Male", party: "FG", status
 (:Candidate {name: "Noel G Walsh", gender: "Male", party: "IND", status: "excluded"});
 
 
+// create candidates for constituency Cavan-Monaghan (sheet 2)
+
+MATCH(c:Constituency{ name: "Cavan-Monaghan" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "66.5",
+c.electorate = "90618",
+c.spoiledVotes = "598",
+c.validVotes = "59650",
+c.quota = "11931"
+
+CREATE(:Candidate { name: "Caoimhghín Ó Caoláin", gender: "Female", party: "SF", status: "elected"}),
+(:Candidate { name: "Heather Humphreys", gender: "Female", party: "FG", status: "elected"}),
+(:Candidate { name: "Brendan Smith", gender: "Male", party: "FF", status: "elected"}),
+(:Candidate { name: "Niamh Smyth", gender: "Female", party: "FF", status: "elected"}),
+(:Candidate { name: "Joe O'Reilly", gender: "Male", party: "FG", status: "excluded"}),
+(:Candidate { name: "Kathryn Reilly", gender: "Female", party: "SF", status: "excluded"}),
+(:Candidate { name: "Mike Durkan", gender: "Male", party: "FF", status: "excluded"}),
+(:Candidate { name: "Mary Smyth", gender: "Female", party: "IND", status: "excluded"}),
+(:Candidate { name: "Sean Conlan", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Micheál Callaghan", gender: "Male", party: "GP", status: "excluded"}),
+(:Candidate { name: "John Wilson", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Michael McDermott", gender: "Male", party: "DDI", status: "excluded"}),
+(:Candidate { name: "Aoife O'Connell", gender: "Female", party: "DDI", status: "excluded"}),
+(:Candidate { name: "Emmett Smith", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "James Mee", gender: "Male", party: "IND", status: "excluded" });
+
+
 // create candidates for constituency Meath East (sheet 33)
 
 MATCH(c:Constituency{name: "Meath East"})
