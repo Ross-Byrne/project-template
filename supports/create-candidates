@@ -120,6 +120,33 @@ CREATE(:Candidate { name: "Sean Sherlock", gender: "Male", party: "LAB", status:
 
 // create candidates for constituency Cork North-Central (sheet 5)
 
+MATCH(c:Constituency{ name: "Cork North-Central" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "63.3",
+c.electorate = "81609",
+c.spoiledVotes = "516",
+c.validVotes = "51174",
+c.quota = "10235"
+
+CREATE(:Candidate { name: "Billy Kelleher", gender: "Male", party: "FF", status: "elected"}),
+(:Candidate { name: "Jonathan O'Brien", gender: "Male", party: "SF", status: "elected"}),
+(:Candidate { name: "Mick Barry", gender: "Male", party: "AAA-PBP", status: "elected"}),
+(:Candidate { name: "Dara Murphy", gender: "Male", party: "FG", status: "elected"}),
+(:Candidate { name: "Kathleen Lynch", gender: "Female", party: "LAB", status: "excluded"}),
+(:Candidate { name: "Julie O'Leary", gender: "Female", party: "FG", status: "excluded"}),
+(:Candidate { name: "Thomas Gould", gender: "Male", party: "SF", status: "excluded"}),
+(:Candidate { name: "Oliver Moran", gender: "Male", party: "GP", status: "excluded"}),
+(:Candidate { name: "Ted Tynan", gender: "Male", party: "WP", status: "excluded"}),
+(:Candidate { name: "Paddy O'Leary", gender: "Male", party: "RN", status: "excluded"}),
+(:Candidate { name: "Ger Keohane", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Thomas Kiely", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Mick Murphy", gender: "Male", party: "IND", status: "excluded"}),
+(:Candidate { name: "Peter O'Loughlin", gender: "Male", party: "IND", status: "excluded"});
+
+
+// create candidates for constituency Cork North-West (sheet 6)
 
 
 
