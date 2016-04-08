@@ -695,6 +695,45 @@ RETURN c.name
 
 // create candidates for constituency Galway West (sheet 22)
 
+MATCH(c:Constituency { name: "Galway West" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "62.4",
+c.electorate = "103704",
+c.spoiledVotes = "488",
+c.validVotes = "64271",
+c.quota = "10712"
+
+CREATE(:Candidate { name: "Éamon Ó Cuív", gender: "Male", party: "FF", status: "elected", con: "Galway West" }),
+(:Candidate { name: "Noel Grealish", gender: "Male", party: "IND", status: "elected", con: "Galway West" }),
+(:Candidate { name: "Seán Kyne", gender: "Male", party: "FG", status: "elected", con: "Galway West" }),
+(:Candidate { name: "Catherine Connolly", gender: "Female", party: "IND", status: "elected", con: "Galway West" }),
+(:Candidate { name: "Hildegarde Naughton", gender: "Female", party: "FG", status: "elected", con: "Galway West" }),
+(:Candidate { name: "Trevor Ó Clochartaigh", gender: "Male", party: "SF", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "John O'Mahony", gender: "Male", party: "FG", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "John Connolly", gender: "Male", party: "FF", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Niall Ó Tuathail", gender: "Male", party: "SD", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Derek Nolan", gender: "Male", party: "LAB", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Mary Hoade", gender: "Female", party: "FF", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Mike Cubbard", gender: "Male", party: "IND", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Seamus Sheridan", gender: "Male", party: "GP", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Fidelma Healy-Eames", gender: "Female", party: "IND", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "James Charity", gender: "Male", party: "IND", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Tom Holohan", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Nicola Daveron", gender: "Female", party: "RN", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Tommy Roddy", gender: "Male", party: "IND", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Ruairí O'Neill", gender: "Male", party: "DDI", status: "excluded", con: "Galway West" }),
+(:Candidate { name: "Patrick Feeney", gender: "Male", party: "IND", status: "excluded", con: "Galway West" })
+
+RETURN c.name
+
+// to link another query
+//UNION
+
+
+// create candidates for constituency Kerry (sheet 23)
+
 
 
 
