@@ -885,6 +885,36 @@ UNION
 
 // create candidates for constituency Limerick County (sheet 28)
 
+MATCH(c:Constituency { name: "Limerick County" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "66.2",
+c.electorate = "67633",
+c.spoiledVotes = "336",
+c.validVotes = "44412",
+c.quota = "11104"
+
+CREATE(:Candidate { name: "Niall Collins", gender: "Male", party: "FF", status: "elected", con: "Limerick County" }),
+(:Candidate { name: "Tom Neville", gender: "Male", party: "FG", status: "elected", con: "Limerick County" }),
+(:Candidate { name: "Patrick O'Donovan", gender: "Male", party: "FG", status: "elected", con: "Limerick County" }),
+(:Candidate { name: "Emmett O'Brien", gender: "Male", party: "IND", status: "excluded", con: "Limerick County" }),
+(:Candidate { name: "James Heffernan", gender: "Male", party: "SD", status: "excluded", con: "Limerick County" }),
+(:Candidate { name: "Seamus Browne", gender: "Male", party: "SF", status: "excluded", con: "Limerick County" }),
+(:Candidate { name: "Richard O'Donoghue", gender: "Male", party: "IND", status: "excluded", con: "Limerick County" }),
+(:Candidate { name: "Alexander Cosgrave", gender: "Male", party: "GP", status: "excluded", con: "Limerick County" }),
+(:Candidate { name: "Mark Keogh", gender: "Male", party: "DDI", status: "excluded", con: "Limerick County" }),
+(:Candidate { name: "John O'Gorman", gender: "Male", party: "IND", status: "excluded", con: "Limerick County" })
+
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Longford-Westmeath (sheet 29)
+
 
 
 RETURN c.name
