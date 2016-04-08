@@ -1113,6 +1113,28 @@ UNION
 
 // create candidates for constituency Roscommon-Galway (sheet 35)
 
+MATCH(c:Constituency { name: "Roscommon-Galway" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "71.6",
+c.electorate = "64235",
+c.spoiledVotes = "315",
+c.validVotes = "45680",
+c.quota = "11421"
+
+CREATE(:Candidate { name: "Denis Naughten", gender: "Male", party: "IND", status: "elected", con: "Roscommon-Galway" }),
+(:Candidate { name: "Michael Fitzmaurice", gender: "Male", party: "IA", status: "elected", con: "Roscommon-Galway" }),
+(:Candidate { name: "Eugene Murphy", gender: "Male", party: "FF", status: "elected", con: "Roscommon-Galway" }),
+(:Candidate { name: "Maura Hopkins", gender: "Female", party: "FG", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "Claire Kerrane", gender: "Female", party: "SF", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "Shane Curran", gender: "Male", party: "FF", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "John Kelly", gender: "Male", party: "LAB", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "Eddie Conroy", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "Anne Farrell", gender: "Female", party: "RN", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "Miriam Hennesy", gender: "Female", party: "GP", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "Tony Coleman", gender: "Male", party: "IND", status: "excluded", con: "Roscommon-Galway" }),
+(:Candidate { name: "Thomas Declan Fallon", gender: "Male", party: "IND", status: "excluded", con: "Roscommon-Galway" })
 
 
 RETURN c.name
@@ -1121,45 +1143,52 @@ RETURN c.name
 UNION
 
 
+// create candidates for constituency Sligo-Leitrim (sheet 36)
+
+MATCH(c:Constituency { name: "Sligo-Leitrim" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "65.6",
+c.electorate = "95911",
+c.spoiledVotes = "560",
+c.validVotes = "62335",
+c.quota = "12468"
+
+CREATE(:Candidate { name: "Martin Kenny", gender: "Male", party: "SF", status: "elected", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Marc MacSharry", gender: "Male", party: "FF", status: "elected", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Tony McLoughlin", gender: "Male", party: "FG", status: "elected", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Eamon Scanlon", gender: "Male", party: "FF", status:"elected", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Gerry Reynolds", gender: "Male", party: "FG", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Chris MacManus", gender: "Male", party: "SF", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Paddy O'Rourke", gender: "Male", party: "FF", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Declan Bree", gender: "Male", party: "IND", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "John Perry", gender: "Male", party: "FG", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Marie Casserly", gender: "Female", party: "IA", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Susan O'Keeffe", gender: "Female", party: "LAB", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Nigel Gallagher", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Bernie O'Hara", gender: "Female", party: "IND", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Des Guckian", gender: "Male", party: "IND", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Finbarr Filan", gender: "Male", party: "RN", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Leslie O'Hora", gender: "Female", party: "GP", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Eamon Murray", gender: "Male", party: "IND", status: "excluded", con: "Sligo-Leitrim" }),
+(:Candidate { name: "Bernard Sweeney", gender: "Male", party: "IND", status: "excluded", con: "Sligo-Leitrim" })
+
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Tipperary (sheet 37)
 
 
 
+RETURN c.name
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// to link another query
+UNION
 
 
 
