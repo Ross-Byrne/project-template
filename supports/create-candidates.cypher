@@ -9,7 +9,7 @@ SET
 c.seatsFilled = "5",
 c.turnoutPercent = "65.9",
 c.electorate = "107023",
-c.votesSpoiled = "505",
+c.spoiledVotes = "505",
 c.validVotes = "70009",
 c.quota = "11669"
 
@@ -915,12 +915,50 @@ UNION
 
 // create candidates for constituency Longford-Westmeath (sheet 29)
 
+MATCH(c:Constituency { name: "Longford-Westmeath" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "62.5",
+c.electorate = "89241",
+c.spoiledVotes = "570",
+c.validVotes = "55246",
+c.quota = "11050"
+
+CREATE(:Candidate { name: "Robert Troy", gender: "Male", party: "FF", status: "elected", con: "Longford-Westmeath" }),
+(:Candidate { name: "Peter Burke", gender: "Male", party: "FG", status: "elected", con: "Longford-Westmeath" }),
+(:Candidate { name: "Kevin 'Boxer' Moran", gender: "Male", party: "IA", status: "elected", con: "Longford-Westmeath" }),
+(:Candidate { name: "Willie Penrose", gender: "Male", party: "LAB", status: "elected", con: "Longford-Westmeath" }),
+(:Candidate { name: "Paul Hogan", gender: "Male", party: "SF", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "James Bannon", gender: "Male", party: "FG", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Connie Gerety-Quinn", gender: "Female", party: "FF", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "James Morgan", gender: "Male", party: "IA", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Gabrielle McFadden", gender: "Female", party: "FG", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Mae Sexton", gender: "Female", party: "IND", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Manchán Magan", gender: "Male", party: "GP", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Brian Fagan", gender: "Male", party: "IA", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Noel McKervey", gender: "Male", party: "CD", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Dominic Parker", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Barbara Smyth", gender: "Female", party: "IND", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "James Miller", gender: "Male", party: "IND", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Stephanie Healy", gender: "Female", party: "DDI", status: "excluded", con: "Longford-Westmeath" }),
+(:Candidate { name: "Donal Jackson", gender: "Male", party: "IND", status: "excluded", con: "Longford-Westmeath" })
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Louth (sheet 30)
+
 
 
 RETURN c.name
 
 // to link another query
 UNION
+
 
 
 // create candidates for constituency Meath East (sheet 33)
