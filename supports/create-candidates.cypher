@@ -1021,7 +1021,7 @@ RETURN c.name
 UNION
 
 
-// create candidates for constituency Mayo (sheet 32)
+// create candidates for constituency Meath East (sheet 32)
 
 MATCH(c:Constituency{name: "Meath East"})
 
@@ -1052,8 +1052,27 @@ RETURN c.name
 UNION
 
 
-// create candidates for constituency Mayo (sheet 33)
+// create candidates for constituency Meath West (sheet 33)
 
+MATCH(c:Constituency { name: "Meath West" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "60.2",
+c.electorate = "64600",
+c.spoiledVotes = "315",
+c.validVotes = "38605",
+c.quota = "9652"
+
+CREATE(:Candidate { name: "Shane Cassells", gender: "Male", party: "FF", status: "elected", con: "Meath West" }),
+(:Candidate { name: "Damien English", gender: "Male", party: "FG", status: "elected", con: "Meath West" }),
+(:Candidate { name: "Peadar Tóibín", gender: "Male", party: "SF", status: "elected", con: "Meath West" }),
+(:Candidate { name: "Ray Butler", gender: "Male", party: "FG", status: "excluded", con: "Meath West" }),
+(:Candidate { name: "Trevor Golden", gender: "Male", party: "IND", status: "excluded", con: "Meath West" }),
+(:Candidate { name: "Seamus McMenamin", gender: "Male", party: "GP", status: "excluded", con: "Meath West" }),
+(:Candidate { name: "Alan Lawes", gender: "Male", party: "DDI", status: "excluded", con: "Meath West" }),
+(:Candidate { name: "Tracy McElhinney", gender: "Female", party: "LAB", status: "excluded", con: "Meath West" }),
+(:Candidate { name: "John Malone", gender: "Male", party: "IND", status: "excluded", con: "Meath West" })
 
 
 RETURN c.name
@@ -1062,7 +1081,14 @@ RETURN c.name
 UNION
 
 
+// create candidates for constituency Offaly (sheet 34)
 
+
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 
