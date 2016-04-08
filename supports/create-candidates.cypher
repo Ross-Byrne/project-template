@@ -988,7 +988,32 @@ UNION
 
 // create candidates for constituency Mayo (sheet 31)
 
+MATCH(c:Constituency { name: "Mayo" })
 
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "69.1",
+c.electorate = "92958",
+c.spoiledVotes = "600",
+c.validVotes = "63646",
+c.quota = "12730"
+
+CREATE(:Candidate { name: "Enda Kenny", gender: "Male", party: "FG", status: "elected", con: "Mayo" }),
+(:Candidate { name: "Michael Ring", gender: "Male", party: "FG", status: "elected", con: "Mayo" }),
+(:Candidate { name: "Dara Calleary", gender: "Male", party: "FF", status: "elected", con: "Mayo" }),
+(:Candidate { name: "Lisa Chambers", gender: "Female", party: "FF", status: "elected", con: "Mayo" }),
+(:Candidate { name: "Michelle Mulherin", gender: "Female", party: "FG", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Rose Conway-Walsh", gender: "Female", party: "SF", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Jerry Cowley", gender: "Male", party: "IND", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Michael Farrington", gender: "Male", party: "RN", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Margaret Sheehan", gender: "Female", party: "GP", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Tom Moran", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "George O'Malley", gender:"Male", party: "IND", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Peter Jordan", gender: "Male", party: "IND", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Stephen Manning", gender: "Male", party: "IND", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Mohammad Kamal Uddin", gender: "Male", party: "IND", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Gerry O'Boyle", gender: "Male", party: "IND", status: "excluded", con: "Mayo" }),
+(:Candidate { name: "Sean Forkin", gender: "Male", party: "IND", status: "excluded", con: "Mayo" })
 
 RETURN c.name
 
@@ -996,7 +1021,7 @@ RETURN c.name
 UNION
 
 
-// create candidates for constituency Meath East (sheet 33)
+// create candidates for constituency Mayo (sheet 32)
 
 MATCH(c:Constituency{name: "Meath East"})
 
@@ -1024,5 +1049,25 @@ CREATE(:Candidate { name: "Thomas Byrne" , gender: "Male", party: "FF", status: 
 RETURN c.name
 
 // to link another query
-//UNION
+UNION
+
+
+// create candidates for constituency Mayo (sheet 33)
+
+
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+
+
+
+
+
+
+
+
 
