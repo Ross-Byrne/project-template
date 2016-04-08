@@ -690,7 +690,7 @@ CREATE(:Candidate { name: "Seán Canney", gender: "Male", party: "IA", status: "
 RETURN c.name
 
 // to link another query
-//UNION
+UNION
 
 
 // create candidates for constituency Galway West (sheet 22)
@@ -729,7 +729,7 @@ CREATE(:Candidate { name: "Éamon Ó Cuív", gender: "Male", party: "FF", status
 RETURN c.name
 
 // to link another query
-//UNION
+UNION
 
 
 // create candidates for constituency Kerry (sheet 23)
@@ -764,11 +764,43 @@ CREATE(:Candidate { name: "Michael Healy-Rae", gender: "Male", party: "IND", sta
 RETURN c.name
 
 // to link another query
-//UNION
+UNION
 
 
 // create candidates for constituency Kildare North (sheet 24)
 
+MATCH(c:Constituency { name: "Kildare North" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "63.4",
+c.electorate = "77609",
+c.spoiledVotes = "291",
+c.validVotes = "48935",
+c.quota = "9788"
+
+CREATE(:Candidate { name: "Catherine Murphy", gender: "Female", party: "SD", status: "elected", con: "Kildare North" }),
+(:Candidate { name: "James Lawless", gender: "Male", party: "FF", status: "elected", con: "Kildare North" }),
+(:Candidate { name: "Bernard Durkan", gender: "Male", party: "FG", status: "elected", con: "Kildare North" }),
+(:Candidate { name: "Frank O'Rourke", gender: "Male", party: "FF", status: "elected", con: "Kildare North" }),
+(:Candidate { name: "Anthony Lawlor", gender: "Male", party: "FG", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Emmet Stagg", gender: "Male", party: "LAB", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Réada Cronin", gender: "Female", party: "SF", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Maebh Ní Fhallúin", gender: "Female", party: "GP", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Brendan Young", gender: "Male", party: "IND", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Shane Fitzgerald", gender: "Male", party: "RN", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Ashling Merriman", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Michael Beirne", gender: "Male", party: "IND", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Gerard Dunne", gender: "Male", party: "IND", status: "excluded", con: "Kildare North" }),
+(:Candidate { name: "Elizabeth O'Sullivan", gender: "Female", party: "IND", status: "excluded", con: "Kildare North" })
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Kildare South (sheet 25)
 
 
 
