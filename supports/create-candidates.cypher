@@ -1215,7 +1215,28 @@ UNION
 
 // create candidates for constituency Waterford (sheet 38)
 
+MATCH(c:Constituency { name: "Waterford" })
 
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "63.7",
+c.electorate = "81819",
+c.spoiledVotes = "400",
+c.validVotes = "51703",
+c.quota = "10341"
+
+CREATE(:Candidate { name: "John Halligan", gender: "Male", party: "IA", status: "elected", con: "Waterford" }),
+(:Candidate { name: "Mary Butler", gender: "Female", party: "FF", status: "elected", con: "Waterford" }),
+(:Candidate { name: "David Cullinane", gender: "Male", party: "SF", status: "elected", con: "Waterford" }),
+(:Candidate { name: "John Deasy", gender: "Male", party: "FG", status: "elected", con: "Waterford" }),
+(:Candidate { name: "Paudie Coffey", gender: "Male", party: "FG", status: "excluded", con: "Waterford" }),
+(:Candidate { name: "Grace O'Sullivan", gender: "Female", party: "GP", status:  "excluded", con: "Waterford" }),
+(:Candidate { name: "Ciara Conway", gender: "Female", party: "LAB", status: "excluded", con: "Waterford" }),
+(:Candidate { name: "Una Dunphy", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Waterford" }),
+(:Candidate { name: "Mailo Power", gender: "Female", party: "RN", status: "excluded", con: "Waterford" }),
+(:Candidate { name: "John D. Walsh", gender: "Male", party: "IND", status: "excluded", con: "Waterford" }),
+(:Candidate { name: "Edward Quilty", gender: "Male", party: "DDI", status: "excluded", con: "Waterford" }),
+(:Candidate { name: "Sheikh Mohiuddin Ahmed", gender: "Male", party: "IND", status: "excluded", con: "Waterford" })
 
 RETURN c.name
 
