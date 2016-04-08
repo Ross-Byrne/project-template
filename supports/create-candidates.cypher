@@ -734,6 +734,41 @@ RETURN c.name
 
 // create candidates for constituency Kerry (sheet 23)
 
+MATCH(c:Constituency { name: "Kerry" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "70.7",
+c.electorate = "112751",
+c.spoiledVotes = "476",
+c.validVotes = "79273",
+c.quota = "13213"
+
+CREATE(:Candidate { name: "Michael Healy-Rae", gender: "Male", party: "IND", status: "elected", con: "Kerry" }),
+(:Candidate { name: "Brendan Griffin", gender: "Male", party: "FG", status: "elected", con: "Kerry" }),
+(:Candidate { name: "Danny Healy-Rae", gender: "Male", party: "IND", status: "elected", con: "Kerry" }),
+(:Candidate { name: "Martin Ferris", gender: "Male", party: "SF", status: "elected", con: "Kerry" }),
+(:Candidate { name: "John Brassil", gender: "Male", party: "FF", status: "elected", con: "Kerry" }),
+(:Candidate { name: "Jimmy Deenihan", gender: "Male", party: "FG", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Arthur Spring", gender: "Male", party: "LAB", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Norma Moriarty", gender: "Female", party: "FF", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Michael O'Gorman", gender: "Male", party: "IND", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Brian Finucane", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Michael Fitzgerald", gender: "Male", party: "GP", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Donal Corcoran", gender: "Male", party: "RN", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Grace O'Donnell", gender: "Female", party: "FG", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Mary E Fitzgibbon", gender: "Female", party: "IND", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Kevin Murphy", gender: "Male", party: "IND", status: "excluded", con: "Kerry" }),
+(:Candidate { name: "Henry Gaynor", gender: "Male", party: "IND", status: "excluded", con: "Kerry" })
+
+RETURN c.name
+
+// to link another query
+//UNION
+
+
+// create candidates for constituency Kildare North (sheet 24)
+
 
 
 
