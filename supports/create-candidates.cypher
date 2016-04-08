@@ -1246,6 +1246,33 @@ UNION
 
 // create candidates for constituency Wexford (sheet 39)
 
+MATCH(c:Constituency { name: "Wexford" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "65.9",
+c.electorate = "109865",
+c.spoiledVotes = "691",
+c.validVotes = "71661",
+c.quota = "11944"
+
+CREATE(:Candidate { name: "Mick Wallace", gender: "Male", party: "IND", status: "elected", con: "Wexford" }),
+(:Candidate { name: "James Browne", gender: "Male", party: "FF", status: "elected", con: "Wexford" }),
+(:Candidate { name: "Brendan Howlin", gender: "Male", party: "LAB", status: "elected", con: "Wexford" }),
+(:Candidate { name: "Michael D'Arcy", gender: "Male", party: "FG", status: "elected", con: "Wexford" }),
+(:Candidate { name: "Paul Kehoe", gender: "Male", party: "FG", status: "elected", con: "Wexford" }),
+(:Candidate { name: "Johnny Mythen", gender: "Male", party: "SF", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Malcolm Byrne", gender: "Male", party: "FF", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Ger Carthy", gender: "Male", party: "IND", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Aoife Byrne", gender: "Female", party: "FF", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Leonard Kelly", gender: "Male", party: "SD", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Deirdre Wadding", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "John Dwyer", gender: "Male", party: "IND", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Julie Hogan", gender: "Female", party: "FG", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Ann Walsh", gender: "Female", party: "GP", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Caroline Foxe", gender: "Female", party: "IND", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "Emmet Moloney", gender: "Male", party: "IND", status: "excluded", con: "Wexford" }),
+(:Candidate { name: "David Lloyd", gender: "Male", party: "DDI", status: "excluded", con: "Wexford" })
 
 
 RETURN c.name
