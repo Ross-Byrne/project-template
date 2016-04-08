@@ -27,9 +27,12 @@ CREATE(:Candidate { name: "John Paul Phelan", gender: "Male", party: "FG", statu
 (:Candidate { name: "Conor MacLiam", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Carlow-Kilkenny"}),
 (:Candidate { name: "Paddy Manning", gender: "Male", party: "IND", status: "excluded", con: "Carlow-Kilkenny"}),
 (:Candidate { name: "Keith Gilligan", gender: "Male", party: "IND", status: "excluded", con: "Carlow-Kilkenny"}),
-(:Candidate { name: "Noel G Walsh", gender: "Male", party: "IND", status: "excluded", con: "Carlow-Kilkenny"});
+(:Candidate { name: "Noel G Walsh", gender: "Male", party: "IND", status: "excluded", con: "Carlow-Kilkenny"})
 
+RETURN c.name
 
+// to link another query
+UNION
 
 // create candidates for constituency Cavan-Monaghan (sheet 2)
 
@@ -57,9 +60,12 @@ CREATE(:Candidate { name: "Caoimhghín Ó Caoláin", gender: "Female", party: "S
 (:Candidate { name: "Michael McDermott", gender: "Male", party: "DDI", status: "excluded", con: "Cavan-Monaghan"}),
 (:Candidate { name: "Aoife O'Connell", gender: "Female", party: "DDI", status: "excluded", con: "Cavan-Monaghan"}),
 (:Candidate { name: "Emmett Smith", gender: "Male", party: "IND", status: "excluded", con: "Cavan-Monaghan"}),
-(:Candidate { name: "James Mee", gender: "Male", party: "IND", status: "excluded" , con: "Cavan-Monaghan"});
+(:Candidate { name: "James Mee", gender: "Male", party: "IND", status: "excluded" , con: "Cavan-Monaghan"})
 
+RETURN c.name
 
+// to link another query
+UNION
 
 // create candidates for constituency Clare (sheet 3)
 
@@ -88,8 +94,12 @@ CREATE(:Candidate { name: "Timmy Dooley", gender: "Male", party: "FF", status: "
 (:Candidate { name: "Niamh O'Brien", gender: "Female", party: "FN", status: "excluded", con: "Clare"}),
 (:Candidate { name: "Richard Cahill", gender: "Male", party: "IND", status: "excluded", con: "Clare"}),
 (:Candidate { name: "André Sibo Hakizimana", gender: "Male", party: "IND", status: "excluded", con: "Clare"}),
-(:Candidate { name: "Dermot Mulqueen", gender: "Male", party: "IND", status: "excluded" , con: "Clare"});
+(:Candidate { name: "Dermot Mulqueen", gender: "Male", party: "IND", status: "excluded" , con: "Clare"})
 
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Cork East (sheet 4)
@@ -118,9 +128,12 @@ CREATE(:Candidate { name: "Sean Sherlock", gender: "Male", party: "LAB", status:
 (:Candidate { name: "Ken Curtin", gender: "Male", party: "SD", status: "excluded", con: "Cork East"}),
 (:Candidate { name: "Natasha Harty", gender: "Female", party: "GP", status: "excluded", con: "Cork East"}),
 (:Candidate { name: "Paddy Bullman", gender: "Male", party: "IND", status: "excluded", con: "Cork East"}),
-(:Candidate { name: "Ross Cannon", gender: "Male", party: "IND", status: "excluded" , con: "Cork East"});
+(:Candidate { name: "Ross Cannon", gender: "Male", party: "IND", status: "excluded" , con: "Cork East"})
 
+RETURN c.name
 
+// to link another query
+UNION
 
 
 // create candidates for constituency Cork North-Central (sheet 5)
@@ -148,9 +161,12 @@ CREATE(:Candidate { name: "Billy Kelleher", gender: "Male", party: "FF", status:
 (:Candidate { name: "Ger Keohane", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"}),
 (:Candidate { name: "Thomas Kiely", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"}),
 (:Candidate { name: "Mick Murphy", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"}),
-(:Candidate { name: "Peter O'Loughlin", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"});
+(:Candidate { name: "Peter O'Loughlin", gender: "Male", party: "IND", status: "excluded", con: "Cork North-Central"})
 
+RETURN c.name
 
+// to link another query
+UNION
 
 // create candidates for constituency Cork North-West (sheet 6)
 
@@ -176,7 +192,12 @@ CREATE(:Candidate { name: "Michael Creed", gender: "Male", party: "FG", status: 
 (:Candidate { name: "Cormac Manning", gender: "Male", party: "GP", status: "excluded", con: "Cork North-West"}),
 (:Candidate { name: "Jerry O'Sullivan", gender: "Male", party: "IND", status: "excluded", con: "Cork North-West"}),
 (:Candidate { name: "Shirley Griffin", gender: "Female", party: "IND", status: "excluded", con: "Cork North-West"}),
-(:Candidate { name: "Michael O'Donnell", gender: "Male", party: "CPI", status: "excluded", con: "Cork North-West"});
+(:Candidate { name: "Michael O'Donnell", gender: "Male", party: "CPI", status: "excluded", con: "Cork North-West"})
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Cork South-Central (sheet 7)
@@ -205,7 +226,12 @@ CREATE(:Candidate { name: "Michael McGrath", gender: "Male", party: "FF", status
 (:Candidate { name: "Jim O'Connell", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Cork South-Central"}),
 (:Candidate { name: "Joe Harris", gender: "Male", party: "IND", status: "excluded", con: "Cork South-Central"}),
 (:Candidate { name: "Elizabeth Hourihane", gender: "Female", party: "IND", status: "excluded", con: "Cork South-Central"}),
-(:Candidate { name: "Michael Mohally", gender: "Male", party: "IND", status: "excluded", con: "Cork South-Central" });
+(:Candidate { name: "Michael Mohally", gender: "Male", party: "IND", status: "excluded", con: "Cork South-Central" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Cork South-West (sheet 8)
@@ -230,7 +256,12 @@ CREATE(:Candidate { name: "Margaret Murphy-O'Mahony", gender: "Female", party: "
 (:Candidate { name: "Johnny O'Mahony", gender: "Male", party: "GP", status: "excluded", con: "Cork South-West" }),
 (:Candidate { name: "Gillian Powell", gender: "Female", party: "IND", status: "excluded", con: "Cork South-West" }),
 (:Candidate { name: "Theresa Heaney", gender: "Female", party: "CD", status: "excluded", con: "Cork South-West" }),
-(:Candidate { name: "Fiona Pettit O'Leary", gender: "Female", party: "IND", status: "excluded", con: "Cork South-West" });
+(:Candidate { name: "Fiona Pettit O'Leary", gender: "Female", party: "IND", status: "excluded", con: "Cork South-West" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Donegal (sheet 9)
@@ -260,7 +291,12 @@ CREATE(:Candidate { name: "Pearse Doherty", gender: "Male", party: "SF", status:
 (:Candidate { name: "Ian McGarvey", gender: "Male", party: "IND", status: "excluded", con: "Donegal" }),
 (:Candidate { name: "Paula Flanagan", gender: "Female", party: "GP", status: "excluded", con: "Donegal" }),
 (:Candidate { name: "Michael Mooney", gender: "Male", party: "IND", status: "excluded", con: "Donegal" }),
-(:Candidate { name: "Cordelia Nic Fhearraigh", gender: "Female", party: "FN", status: "excluded", con: "Donegal" });
+(:Candidate { name: "Cordelia Nic Fhearraigh", gender: "Female", party: "FN", status: "excluded", con: "Donegal" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin Bay North (sheet 10)
@@ -294,7 +330,12 @@ CREATE(:Candidate { name: "Richard Bruton", gender: "Male", party: "FG", status:
 (:Candidate { name: "Donna Cooney", gender: "Female", party: "GP", status: "excluded", con: "Dublin Bay North" }),
 (:Candidate { name: "Jimmy Guerin", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay North" }),
 (:Candidate { name: "Paul Clarke", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay North" }),
-(:Candidate { name: "Proinsias Ó Conaráin", gender: "Male", party: "IND", status: "excluded" , con: "Dublin Bay North" });
+(:Candidate { name: "Proinsias Ó Conaráin", gender: "Male", party: "IND", status: "excluded" , con: "Dublin Bay North" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin Bay South (sheet 11)
@@ -322,7 +363,12 @@ CREATE(:Candidate { name: "Eamon Ryan", gender: "Male", party: "GP", status: "el
 (:Candidate { name: "Alan MacStiofain", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" }),
 (:Candidate { name: "Eoin Tierney", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" }),
 (:Candidate { name: "William DJ Gorman", gender: "IND", status: "excluded", con: "Dublin Bay South" }),
-(:Candidate { name: "John Dominic Keigher", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" });
+(:Candidate { name: "John Dominic Keigher", gender: "Male", party: "IND", status: "excluded", con: "Dublin Bay South" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin Central (sheet 12)
@@ -351,7 +397,12 @@ CREATE(:Candidate { name: "Mary Lou McDonald", gender: "Female", party: "SF", st
 (:Candidate { name: "Éilis Ryan", gender: "Female", party: "WP", status: "excluded", con: "Dublin Central" }),
 (:Candidate { name: "Cormac McKay", gender: "Male", party: "DDI", status: "excluded", con: "Dublin Central" }),
 (:Candidate { name: "Kerry Guinan", gender: "Female", party: "IND", status: "excluded", con: "Dublin Central" }),
-(:Candidate { name: "William DJ Gorman", gender: "Male", party: "IND", status: "excluded", con: "Dublin Central" });
+(:Candidate { name: "William DJ Gorman", gender: "Male", party: "IND", status: "excluded", con: "Dublin Central" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin Fingal (sheet 13)
@@ -380,7 +431,12 @@ CREATE(:Candidate { name: "Darragh O'Brien", gender: "Male", party: "FF", status
 (:Candidate { name: "Terry Kelleher", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Dublin Fingal" }),
 (:Candidate { name: "Roslyn Fuller", gender: "Female", party: "IND", status: "excluded", con: "Dublin Fingal" }),
 (:Candidate { name: "Marcus De Brun", gender: "Male", party: "IND", status: "excluded", con: "Dublin Fingal" }),
-(:Candidate { name: "Fergal O'Connell", gender: "Male", party: "IND", status: "excluded", con: "Dublin Fingal" });
+(:Candidate { name: "Fergal O'Connell", gender: "Male", party: "IND", status: "excluded", con: "Dublin Fingal" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin Mid-West (sheet 14)
@@ -409,7 +465,12 @@ CREATE(:Candidate { name: "Eoin Ó Broin", gender: "Male", party: "SF", status: 
 (:Candidate { name: "Clare Leonard", gender: "Female", party: "IND", status: "excluded", con: "Dublin Mid-West" }),
 (:Candidate { name: "Patrick Akpoveta", gender: "Male", party: "IND", status: "excluded", con: "Dublin Mid-West" }),
 (:Candidate { name: "Haroon Khan", gender: "Male", party: "IND", status: "excluded", con: "Dublin Mid-West" }),
-(:Candidate { name: "Christopher Healy", gender: "Male", party: "DDI", status: "excluded", con: "Dublin Mid-West" });
+(:Candidate { name: "Christopher Healy", gender: "Male", party: "DDI", status: "excluded", con: "Dublin Mid-West" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin North-West (sheet 15)
@@ -434,7 +495,12 @@ CREATE(:Candidate { name: "Dessie Ellis", gender: "Male", party: "SF", status: "
 (:Candidate { name: "Bernie Hughes", gender: "Male", party: "IND", status: "excluded", con: "Dublin North-West" }),
 (:Candidate { name: "Caroline Conroy", gender: "Female", party: "GP", status: "excluded", con: "Dublin North-West" }),
 (:Candidate { name: "Jimmy Dignam", gender: "Male", party: "WP", status: "excluded", con: "Dublin North-West" }),
-(:Candidate { name: "Cormac McKay", gender: "Male", party: "DDI", status: "excluded", con: "Dublin North-West" });
+(:Candidate { name: "Cormac McKay", gender: "Male", party: "DDI", status: "excluded", con: "Dublin North-West" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin Rathdown (sheet 16)
@@ -457,7 +523,12 @@ CREATE(:Candidate { name: "Shane Ross", gender: "Male", party: "IA", status: "el
 (:Candidate { name: "Alex White", gender: "Male", party: "LAB", status: "excluded", con: "Dublin Rathdown" }),
 (:Candidate { name: "Sorcha Nic Cormaic", gender: "Female", party: "SF", status: "excluded", con: "Dublin Rathdown" }),
 (:Candidate { name: "Peter Mathews", gender: "Male", party: "IND",status: "excluded", con: "Dublin Rathdown" }),
-(:Candidate { name: "Alan Daveron", gender: "Male", party: "RN", status: "excluded", con: "Dublin Rathdown" });
+(:Candidate { name: "Alan Daveron", gender: "Male", party: "RN", status: "excluded", con: "Dublin Rathdown" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin South-Central (sheet 17)
@@ -484,7 +555,12 @@ CREATE(:Candidate { name: "Catherine Byrne", gender: "Female", party: "FG", stat
 (:Candidate { name: "Oisín Ó hAlmhain", gender: "Male", party: "GP", status: "excluded", con: "Dublin South-Central" }),
 (:Candidate { name: "Michael Gargan", gender: "Male", party: "RN", status: "excluded", con: "Dublin South-Central" }),
 (:Candidate { name: "Neville Bradley", gender: "Male", party: "DDI", status: "excluded", con: "Dublin South-Central" }),
-(:Candidate { name: "Richard Murray", gender: "Male", party: "IND", status: "excluded" , con: "Dublin South-Central" });
+(:Candidate { name: "Richard Murray", gender: "Male", party: "IND", status: "excluded" , con: "Dublin South-Central" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin South-West (sheet 18)
@@ -519,7 +595,12 @@ CREATE(:Candidate { name: "Paul Murphy", gender: "Male", party: "AAA-PBP", statu
 (:Candidate { name: "Stephen Sinclair", gender: "Male", party: "DDI", status: "excluded", con: "Dublin South-West" }),
 (:Candidate { name: "Kieran Adam Quigley", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" }),
 (:Candidate { name: "Joan Summerville Molloy", gender: "Female", party: "IND", status: "excluded", con: "Dublin South-West" }),
-(:Candidate { name: "Frank O'Gorman", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" });
+(:Candidate { name: "Frank O'Gorman", gender: "Male", party: "IND", status: "excluded", con: "Dublin South-West" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dublin West (sheet 19)
@@ -544,7 +625,12 @@ CREATE(:Candidate { name: "Leo Varadkar", gender: "Male", party: "FG", status: "
 (:Candidate { name: "TJ Clare", gender: "Male", party: "IND", status: "excluded", con: "Dublin West" }),
 (:Candidate { name: "Catherine Noone", gender: "Female", party: "FG", status: "excluded", con: "Dublin West" }),
 (:Candidate { name: "Jo O'Brien", gender: "Male", party: "RN", status: "excluded", con: "Dublin West" }),
-(:Candidate { name: "Dermot Casey", gender: "Male", party: "IND", status: "excluded", con: "Dublin West" });
+(:Candidate { name: "Dermot Casey", gender: "Male", party: "IND", status: "excluded", con: "Dublin West" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Dún Laoghaire (sheet 20)
@@ -570,7 +656,12 @@ CREATE(:Candidate { name: "Richard Boyd-Barrett", gender: "Male", party: "AAA-PB
 (:Candidate { name: "Carol Hunt", gender: "Female", party: "IA", status: "excluded", con: "Dún Laoghaire" }),
 (:Candidate { name: "Shane O'Brien", gender: "Male", party: "SF", status: "excluded", con: "Dún Laoghaire" }),
 (:Candidate { name: "Frank Cronin", gender: "Male", party: "RN", status: "excluded", con: "Dún Laoghaire" }),
-(:Candidate { name: "Raymond Whitehead", gender: "Male", party: "DDI", status: "excluded", con: "Dún Laoghaire" });
+(:Candidate { name: "Raymond Whitehead", gender: "Male", party: "DDI", status: "excluded", con: "Dún Laoghaire" })
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Galway East (sheet 21)
@@ -601,7 +692,10 @@ CREATE(:Candidate { name: "Thomas Byrne" , gender: "Male", party: "FF", status: 
 (:Candidate { name: "Ben Gilroy", gender: "Male", party: "DDI", status: "excluded", con: "Meath East"}),
 (:Candidate { name: "Seán Ó Buachalla", gender: "Male", party: "GP", status: "excluded", con: "Meath East"}),
 (:Candidate { name: "Sarah Tyrrell" , gender: "Female", party: "RN", status: "excluded", con: "Meath East"}),
-(:Candidate { name: "Séamus McDonagh", gender: "Male", party: "WP", status: "excluded" , con: "Meath East"});
+(:Candidate { name: "Séamus McDonagh", gender: "Male", party: "WP", status: "excluded" , con: "Meath East"})
 
+RETURN c.name
 
+// to link another query
+//UNION
 
