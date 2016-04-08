@@ -1283,7 +1283,32 @@ UNION
 
 // create candidates for constituency Wicklow (sheet 40)
 
+MATCH(c:Constituency { name: "Wicklow" })
 
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "70.9",
+c.electorate = "97858",
+c.spoiledVotes = "596",
+c.validVotes = "68804",
+c.quota = "11468"
+
+CREATE(:Candidate { name: "Stephen Donnelly", gender: "Male", party: "SD", status: "elected", con: "Wicklow" }),
+(:Candidate { name: "John Brady", gender: "Male", party: "SF", status: "elected", con: "Wicklow" }),
+(:Candidate { name: "Simon Harris", gender: "Male", party: "FG", status: "elected", con: "Wicklow" }),
+(:Candidate { name: "Andrew Doyle", gender: "Male", party: "FG", status: "elected", con: "Wicklow" }),
+(:Candidate { name: "Pat Casey", gender: "Male", party: "FF", status: "elected", con: "Wicklow" }),
+(:Candidate { name: "Billy Timmins", gender: "Male", party: "RN", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Joe Behan", gender: "Male", party: "IND", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Anne Ferris", gender: "Female", party: "LAB", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Jennifer Cuffe", gender: "Female", party: "FF", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Avril Cronin", gender: "Female", party: "FG", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Sharon Briggs", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Steven Matthews", gender: "Male", party: "GP", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Anna Doyle", gender: "Female", party: "AAA-PBP", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Charlie Keddy", gender: "Male", party: "IND", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Katrina Hutchinson", gender: "Female", party: "DDI", status: "excluded", con: "Wicklow" }),
+(:Candidate { name: "Bob Kearns", gender: "Male", party: "IND", status: "excluded", con: "Wicklow" })
 
 RETURN c.name
 
