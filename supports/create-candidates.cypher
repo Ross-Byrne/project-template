@@ -830,7 +830,36 @@ UNION
 
 // create candidates for constituency Laois (sheet 26)
 
+MATCH(c:Constituency { name: "Laois" })
 
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "62",
+c.electate = "63295",
+c.spoiledVotes = "352",
+c.validVotes = "38868",
+c.quota = "9718"
+
+CREATE(:Candidate { name: "Seán Fleming", gender: "Male", party: "FF", status: "elected", con: "Laois" }),
+(:Candidate { name: "Brian Stanley", gender: "Male", party: "SF", status: "elected", con: "Laois" }),
+(:Candidate { name: "Charlie Flanagan", gender: "Male", party: "FG", status: "elected", con: "Laois" }),
+(:Candidate { name: "Thomasina Connell", gender: "Female", party: "FG", status: "excluded", con: "Laois" }),
+(:Candidate { name: "John Whelan", gender: "Male", party: "LAB", status: "excluded", con: "Laois" }),
+(:Candidate { name: "Sinead Moore", gender: "Female", party: "GP", status: "excluded", con: "Laois" })
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Limerick City (sheet 27)
+
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Meath East (sheet 33)
