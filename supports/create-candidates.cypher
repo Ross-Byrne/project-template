@@ -1083,12 +1083,95 @@ UNION
 
 // create candidates for constituency Offaly (sheet 34)
 
+MATCH(c:Constituency { name: "Offaly" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "67.7",
+c.electorate = "65636",
+c.spoiledVotes = "411",
+c.validVotes = "44034",
+c.quota = "11009"
+
+CREATE(:Candidate { name: "Barry Cowen", gender: "Male", party: "FF", status: "elected", con: "Offaly" }),
+(:Candidate { name: "Marcella Corcoran-Kennedy", gender: "Female", party: "FG", status: "elected", con: "Offaly" }),
+(:Candidate { name: "Carol Nolan", gender: "Female", party: "SF", status: "elected", con: "Offaly" }),
+(:Candidate { name: "Eddie Fitzpatrick", gender: "Male", party: "FF", status: "excluded", con: "Offaly" }),
+(:Candidate { name: "John Leahy", gender: "Male", party: "RN", status: "excluded", con: "Offaly" }),
+(:Candidate { name: "Joe Hannigan", gender: "Male", party: "IND", status: "excluded", con: "Offaly" }),
+(:Candidate { name: "John Foley", gender: "Male", party: "IA", status: "excluded", con: "Offaly" }),
+(:Candidate { name: "Ken Smollen", gender: "Male", party: "IDP", status: "excluded", con: "Offaly" }),
+(:Candidate { name: "Teresa Ryan-Feehan", gender: "Female", party: "IND", status: "excluded", con: "Offaly" }),
+(:Candidate { name: "Kate Bopp", gender: "Female", party: "IND", status: "excluded", con: "Offaly" }),
+(:Candidate { name: "Christopher Fettes", gender: "Male", party: "GP", status: "excluded", con: "Offaly" })
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Roscommon-Galway (sheet 35)
+
 
 
 RETURN c.name
 
 // to link another query
 UNION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
