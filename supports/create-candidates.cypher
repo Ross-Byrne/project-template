@@ -666,6 +666,35 @@ UNION
 
 // create candidates for constituency Galway East (sheet 21)
 
+MATCH(c:Constituency { name: "Galway East" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "66.7",
+c.electorate = "68432",
+c.spoiledVotes = "379",
+c.validVotes = "45238",
+c.quota = "11310"
+
+CREATE(:Candidate { name: "Seán Canney", gender: "Male", party: "IA", status: "elected", con: "Galway East" }),
+(:Candidate { name: "Anne Rabbitte", gender: "Female", party: "FF", status: "elected", con: "Galway East" }),
+(:Candidate { name: "Ciaran Cannon", gender: "Male", party: "FG", status: "elected", con: "Galway East" }),
+(:Candidate { name: "Paul Connaughton", gender: "Male", party: "FG", status: "excluded", con: "Galway East" }),
+(:Candidate { name: "Colm Keaveney", gender: "Male", party: "FF", status: "excluded", con: "Galway East" }),
+(:Candidate { name: "Lorraine Higgins", gender: "Female", party: "LAB", status: "excluded", con: "Galway East" }),
+(:Candidate { name: "Annemarie Roche", gender: "Female", party: "SF", status: "excluded", con: "Galway East" }),
+(:Candidate { name: "Michael 'Stroke' Fahy", gender: "Male", party: "IND", status: "excluded", con: "Galway East" }),
+(:Candidate { name: "Máiréad Ní Chróinín", gender: "Female", party: "GP", status: "excluded", con: "Galway East" }),
+(:Candidate { name: "Aengus Melia", gender: "Male", party: "DDI", status: "excluded" , con: "Galway East" })
+
+RETURN c.name
+
+// to link another query
+//UNION
+
+
+// create candidates for constituency Galway West (sheet 22)
+
 
 
 
