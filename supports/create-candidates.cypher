@@ -855,6 +855,37 @@ UNION
 
 // create candidates for constituency Limerick City (sheet 27)
 
+MATCH(c:Constituency { name: "Limerick City" })
+
+SET
+c.seatsFilled = "4",
+c.turnoutPercent = "62.4",
+c.electorate = "75568",
+c.spoiledVotes = "357",
+c.validVotes = "46761",
+c.quota = "9353"
+
+CREATE(:Candidate { name: "Willie O'Dea", gender: "Male", party: "FF", status: "elected", con: "Limerick City" }),
+(:Candidate { name: "Maurice Quinlivan", gender: "Male", party: "SF", status: "elected", con: "Limerick City" }),
+(:Candidate { name: "Michael Noonan", gender: "Male", party: "FG", status: "elected", con: "Limerick City" }),
+(:Candidate { name: "Jan O'Sullivan", gender: "Female", party: "LAB", status: "elected", con: "Limerick City" }),
+(:Candidate { name: "Kieran O'Donnell", gender: "Male", party: "FG", status: "excluded", con: "Limerick City" }),
+(:Candidate { name: "Cian Prendiville", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Limerick City" }),
+(:Candidate { name: "Sarah Jane Hennelly", gender: "Female", party: "SD", status: "excluded", con: "Limerick City" }),
+(:Candidate { name: "James Gaffney", gender: "Male", party: "GP", status: "excluded", con: "Limerick City" }),
+(:Candidate { name: "Nora Bennis", gender: "Female", party: "CD", status: "excluded", con: "Limerick City" }),
+(:Candidate { name: "Desmond J Hayes", gender: "Male", party: "IND", status: "excluded", con: "Limerick City" }),
+(:Candidate { name: "Denis Riordan", gender: "Male", party: "IND", status: "excluded", con: "Limerick City" })
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Limerick County (sheet 28)
+
+
 
 RETURN c.name
 
