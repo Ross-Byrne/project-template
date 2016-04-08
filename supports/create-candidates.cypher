@@ -1183,6 +1183,38 @@ UNION
 
 // create candidates for constituency Tipperary (sheet 37)
 
+MATCH(c:Constituency { name: "Tipperary" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "69.8",
+c.electorate = "112615",
+c.spoiledVotes = "646",
+c.validVotes = "77948",
+c.quota = "12992"
+
+CREATE(:Candidate { name: "Jackie Cahill", gender: "Female", party: "FF", status: "elected", con: "Tipperary" }),
+(:Candidate { name: "Michael Lowry", gender: "Male", party: "IND", status: "elected", con: "Tipperary" }),
+(:Candidate { name: "Mattie McGrath", gender: "Male", party: "IND", status: "elected", con: "Tipperary" }),
+(:Candidate { name: "Seamus Healy", gender: "Male", party: "IND", status: "elected", con: "Tipperary" }),
+(:Candidate { name: "Alan Kelly", gender: "Male", party: "LAB", status: "elected", con: "Tipperary" }),
+(:Candidate { name: "Tom Hayes", gender: "Male", party: "FG", status: "excluded", con: "Tipperary" }),
+(:Candidate { name: "Michael Smith", gender: "Male", party: "FF", status: "excluded", con: "Tipperary" }),
+(:Candidate { name: "Seamus Morris", gender: "Male", party: "SF", status: "excluded", con: "Tipperary" }),
+(:Candidate { name: "Noel Coonan", gender: "male", party: "FG", status: "excluded", con: "Tipperary" }),
+(:Candidate { name: "Siobhán Ambrose", gender: "Female", party: "FF", status: "excluded", con: "Tipperary" }),
+(:Candidate { name: "Marie Murphy", gender: "Female", party: "FG", status: "excluded", con: "Tipperary" }),
+(:Candidate { name: "Gearóid Fitzgibbon", gender: "Male", party: "GP", status: "excluded", con: "Tipperary" }),
+(:Candidate { name: "Michael Dillon", gender: "IND", status: "excluded", con: "Tipperary" })
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Waterford (sheet 38)
+
 
 
 RETURN c.name
@@ -1191,11 +1223,21 @@ RETURN c.name
 UNION
 
 
+// create candidates for constituency Wexford (sheet 39)
 
 
 
+RETURN c.name
+
+// to link another query
+UNION
 
 
+// create candidates for constituency Wicklow (sheet 40)
+
+
+
+RETURN c.name
 
 
 
