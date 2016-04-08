@@ -444,7 +444,7 @@ UNION
 MATCH(c:Constituency { name: "Dublin Mid-West" })
 
 SET
-c.seatsFIlled = "4",
+c.seatsFilled = "4",
 c.turnoutPercent = "62.8",
 c.electorate = "69388",
 c.spoiledVotes = "446",
@@ -835,7 +835,7 @@ MATCH(c:Constituency { name: "Laois" })
 SET
 c.seatsFilled = "3",
 c.turnoutPercent = "62",
-c.electate = "63295",
+c.electorate = "63295",
 c.spoiledVotes = "352",
 c.validVotes = "38868",
 c.quota = "9718"
@@ -952,6 +952,32 @@ UNION
 
 // create candidates for constituency Louth (sheet 30)
 
+MATCH(c:Constituency { name: "Louth" })
+
+SET
+c.seatsFilled = "5",
+c.turnoutPercent = "65.2",
+c.electorate = "104696",
+c.spoiledVotes = "749",
+c.validVotes = "67529",
+c.quota = "11255"
+
+CREATE(:Candidate { name: "Imelda Munster", gender: "Female", party: "SF", status: "elected", con: "Louth" }),
+(:Candidate { name: "Declan Breathnach", gender: "Male", party: "FF", status: "elected", con: "Louth" }),
+(:Candidate { name: "Gerry Adams", gender: "Male", party: "SF", status: "elected", con: "Louth" }),
+(:Candidate { name: "Fergus O'Dowd", gender: "Male", party: "FG", status: "elected", con: "Louth" }),
+(:Candidate { name: "Peter Fitzpatrick", gender: "Male", party: "FG", status: "elected", con: "Louth" }),
+(:Candidate { name: "Ged Nash", gender: "Male", party: "LAB", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Garrett Weldon", gender: "Male", party: "AAA-PBP", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Kevin Callan", gender: "Male", party: "IA", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Mark Dearey", gender: "Male", party: "GP", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Emma Coffey", gender: "Female", party: "FF", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Maeve Yore", gender: "Female", party: "IA", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Michael O'Dowd", gender: "Male", status: "RN", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Mary Moran", gender: "Female", party: "LAB", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Anthony Connor", gender: "Male", party: "DDI", status: "excluded", con: "Louth" }),
+(:Candidate { name: "David Bradley", gender: "Male", party: "IND", status: "excluded", con: "Louth" }),
+(:Candidate { name: "Pat Greene", gender: "Male", party: "DDI", status: "excluded", con: "Louth" })
 
 
 RETURN c.name
@@ -959,6 +985,15 @@ RETURN c.name
 // to link another query
 UNION
 
+
+// create candidates for constituency Mayo (sheet 31)
+
+
+
+RETURN c.name
+
+// to link another query
+UNION
 
 
 // create candidates for constituency Meath East (sheet 33)
