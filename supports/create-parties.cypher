@@ -14,4 +14,5 @@ CREATE(:Party { name: "Fine Gael", shortName: "FG" }),
 (:Party { name: "Independent", shortName: "IND" }),
 (:Party { name: "Direct Democracy Ireland", shortName: "DDI" }),
 (:Party { name: "Social Democrats", shortName: "SD" }),
-(:Party { name: "Communist Party of Ireland", shortName: "CPI" });
+(:Party { name: "Communist Party of Ireland", shortName: "CPI" }),
+(:Party { name: "Irish Democratic Party", shortName: "IDP" });

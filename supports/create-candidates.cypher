@@ -1313,14 +1313,3 @@ CREATE(:Candidate { name: "Stephen Donnelly", gender: "Male", party: "SD", statu
 RETURN c.name
 
 
-
-
-
-
-
-
-
-
-
-
-
