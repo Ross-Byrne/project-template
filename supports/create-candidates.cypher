@@ -802,6 +802,35 @@ UNION
 
 // create candidates for constituency Kildare South (sheet 25)
 
+MATCH(c:Constituency { name: "Kildare South" })
+
+SET
+c.seatsFilled = "3",
+c.turnoutPercent = "62.8",
+c.electorate = "59162",
+c.spoiledVotes = "386",
+c.validVotes = "36786",
+c.quota = "9197"
+
+CREATE(:Candidate { name: "Martin Heydon", gender: "Male", party: "FG", status: "elected", con: "Kildare South" }),
+(:Candidate { name: "Fiona O'Loughlin", gender: "Female", party: "FF", status: "elected", con: "Kildare South" }),
+(:Candidate { name: "Seán Ó Fearghaíl", gender: "Male", party: "FF", status: "elected", con: "Kildare South" }),
+(:Candidate { name: "Mark Wall", gender: "Male", party: "LAB", status: "excluded", con: "Kildare South" }),
+(:Candidate { name: "Patricia Ryan", gender: "Female", party: "SF", status: "excluded", con: "Kildare South" }),
+(:Candidate { name: "Fiona McLoughlin-Healy", gender: "Female", party: "FG", status: "excluded", con: "Kildare South" }),
+(:Candidate { name: "Declan Crowe", gender: "Male", party: "IND", status: "excluded", con: "Kildare South" }),
+(:Candidate { name: "Suzanne McEneaney", gender: "Female", party: "GP", status: "excluded", con: "Kildare South" }),
+(:Candidate { name: "Mary Kennedy", gender: "Female", party: "RN", status: "excluded", con: "Kildare South" })
+
+RETURN c.name
+
+// to link another query
+UNION
+
+
+// create candidates for constituency Laois (sheet 26)
+
+
 
 
 // create candidates for constituency Meath East (sheet 33)
