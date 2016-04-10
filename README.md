@@ -11,13 +11,16 @@ Explain how you created your database, and how information is represented in it.
 Summarise your three queries here.
 Then explain them one by one in the following sections.
 
-#### Query one title
-This query retreives the Bacon number of an actor...
+#### Query one, Finding the Party with the most elected female TDs.
+This query returns the name of the party with the most elected female TDs and the number of females in the party.
+I found this query interesting because I noticed it is quite obvious that there is a majority of Male TDs in each party.
 ```cypher
 MATCH
-	(Bacon)
-RETURN
-	Bacon;
+	(a:Candidate {gender: "Female", status: "elected"})-[r:WORKS_IN]->(b:Party) 
+RETURN 
+	COUNT(a) AS Females_In_Party, b.name AS Party 
+ORDER BY 
+	COUNT(a) DESC LIMIT 1;
 ```
 
 #### Query two title
