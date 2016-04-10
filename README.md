@@ -2,7 +2,12 @@
 ###### Ross Byrne, G00310619
 
 ## Introduction
-Give a summary here of what your project is about.
+This project is about representing data about the Irish General Election 2016, in a graph database using Neo4J.
+The database stores information on the constituencies in Ireland, as well as all of the Candidates that ran
+this year and their Partys.
+
+The aim of this project, aside from storing the information about the General Election, is also to explore
+some interesting queries that can be created using the data in the database.
 
 ## Database
 Explain how you created your database, and how information is represented in it.
