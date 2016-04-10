@@ -26,12 +26,28 @@ The graph database is layed out as follows:
 
 There are 3 Nodes and 2 Relationships.
 
-Candidate is the first Node, which has the Label Candidate and the properties:
+**Candidate** is the first Node, which has the Label Candidate and the Properties:
 	- name: the name of the candidate.
 	- gender: the candidate's gender.
 	- party: the short hand abbreviation for the party they are in.
 	- status: their status in the General Election, either 'elected' or 'excluded'.
 	- con: the candidate's constituency.
+
+**Constituency** is the second Node, which the Label Constituency and the Properties:
+	- name: the constituency's name.
+	- population: the population of the constituency.
+	- seats: the number of seats available for TDs from that constituency.
+	- areaDescription: a description of the constituency. Incudes details about the area the constituency covers.
+	- electorate: the number of people legally allowed to vote in the constituency.
+	- seatsFilled: the number of seats filled in the General Election.
+	- turnoutPercent: the percentage of eligible votes that voted in the election.
+	- spoiledVotes: the number of votes spoiled.
+	- validVotes: the number of valid votes cast.
+	- quota: the number of votes a TD needs to get a seat in government.
+	
+**Party** is the third Node, which has the Label Party and the Properties:
+	- name: the full name of the party.
+	- shortName: the abbreviation of the party's name.
 
 
 ## Queries
