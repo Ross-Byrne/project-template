@@ -11,37 +11,58 @@ Explain how you created your database, and how information is represented in it.
 Summarise your three queries here.
 Then explain them one by one in the following sections.
 
-#### Query one, Finding the Party with the most elected female TDs.
+#### Query One
+Finding the Party with the most elected female TDs.
 This query returns the name of the party with the most elected female TDs and the number of females in the party.
 I found this query interesting because I noticed it is quite obvious that there is a majority of Male TDs in each party.
 ```cypher
-MATCH
-	(a:Candidate {gender: "Female", status: "elected"})-[r:WORKS_IN]->(b:Party) 
-RETURN 
-	COUNT(a) AS Females_In_Party, b.name AS Party 
-ORDER BY 
-	COUNT(a) DESC LIMIT 1;
+MATCH // find the elected female candidates that have a relationship with a party
+	(electedFemale:Candidate {gender: "Female", status: "elected"})-->(party:Party) 
+	
+RETURN  // return the number of females in each party & party name
+	COUNT(electedFemale) AS Females_In_Party, 
+	party.name AS Party 
+	
+// order by the number of females in descending order 
+// and limit the results to 1, so you get the party name and female count
+// of party with the most elected female TDs.
+ORDER BY	
+	COUNT(electedFemale) DESC LIMIT 1;
 ```
 
-#### Query two, Getting the Average number of spoiled votes and the average turnout percentage
+#### Query Two
+Getting the Average number of spoiled votes and the average turnout Percentage for the constituencies in Ireland.
 This query gets the average number of spoiled votes and the average turnout percentage for each constituency in the country.
 ```cypher
-MATCH
+MATCH // find the cunstituencies
 	(c:Constituency)
-RETURN 
+	
+RETURN // return the calculated average of spoiled votes and turnoutPercentage
 	AVG(toFloat(c.spoiledVotes)) AS Average_SpoiledVotes, 
 	AVG(toFloat(c.turnoutPercent)) AS Average_TurnoutPercent
-ORDER BY 
-	Average_SpoiledVotes DESC
+	
+ORDER BY // order the results in descending order
+	Average_SpoiledVotes DESC;
 ```
 
-#### Query three title
-This query retreives the Bacon number of an actor...
+#### Query Three
+Getting the number of elected Males, Females & Percentage of elected Female TDs in the country.
+This query gets the number of elected males, elected females and calculates the percentage of female candidates that are elected
+in the entire country.
+
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH // find the nodes
+	(females:Candidate { gender: "Female", status: "elected"}), 
+	(males:Candidate {gender: "Male", status: "elected"})
+	
+WITH // set alias
+	toFloat(COUNT(DISTINCT females)) AS Females,
+	toFloat(COUNT(DISTINCT males)) AS Males
+	
+RETURN // return the information and calulate percentage
+	Females AS ElectedFemales,
+	Males AS ElectedMales,
+	(Females / (Females + Males) * 100) AS PercentOfElectedAreFemales; 
 ```
 
 ## References
