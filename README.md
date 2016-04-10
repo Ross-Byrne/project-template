@@ -22,44 +22,48 @@ If recreating the database:
 - Lastly, run the Relationships cypher script to set up the relationships.
 
 ###Information Layout
-The graph database is layed out as follows:
+The graph database is laid out as follows:
 
 There are 3 Nodes and 2 Relationships.
 
 **Candidate** is the first Node, which has the Label Candidate and the Properties:
-- name: the name of the candidate.
-- gender: the candidate's gender.
-- party: the short hand abbreviation for the party they are in.
-- status: their status in the General Election, either 'elected' or 'excluded'.
-- con: the candidate's constituency.
+- **name:** the name of the candidate.
+- **gender:** the candidate's gender.
+- **party:** the short hand abbreviation for the party they are in.
+- **status:** their status in the General Election, either 'elected' or 'excluded'.
+- **con:** the candidate's constituency.
 
 **Constituency** is the second Node, which the Label Constituency and the Properties:
-- name: the constituency's name.
-- population: the population of the constituency.
-- seats: the number of seats available for TDs from that constituency.
-- areaDescription: a description of the constituency. Incudes details about the area the constituency covers.
-- electorate: the number of people legally allowed to vote in the constituency.
-- seatsFilled: the number of seats filled in the General Election.
-- turnoutPercent: the percentage of eligible votes that voted in the election.
-- spoiledVotes: the number of votes spoiled.
-- validVotes: the number of valid votes cast.
-- quota: the number of votes a TD needs to get a seat in government.
+- **name:** the constituency's name.
+- **population:** the population of the constituency.
+- **seats:** the number of seats available for TDs from that constituency.
+- **areaDescription:** a description of the constituency. Incudes details about the area the constituency covers.
+- **electorate:** the number of people legally allowed to vote in the constituency.
+- **seatsFilled:** the number of seats filled in the General Election.
+- **turnoutPercent:** the percentage of eligible votes that voted in the election.
+- **spoiledVotes:** the number of votes spoiled.
+- **validVotes:** the number of valid votes cast.
+- **quota:** the number of votes a TD needs to get a seat in government.
 	
 **Party** is the third Node, which has the Label Party and the Properties:
-- name: the full name of the party.
-- shortName: the abbreviation of the party's name.
+- **name:** the full name of the party.
+- **shortName:** the abbreviation of the party's name.
 
 **LIVES_IN** is the first Relationship which is between the Nodes Candidate and Constituency.
+
 The Property 'con' in Candidate is used to create the relationship between the Candidate and the constituency nodes.
 This is done in the create-relationships.cypher script.
 
 **WORKS_IN** is the second Relationship which is between the Nodes Candidate and Party.
+
 The Property 'party' in Candidate is used the create the relationship between the Candidate and the Party nodes.
 
-
 ## Queries
-Summarise your three queries here.
-Then explain them one by one in the following sections.
+My three queries are as follows:
+
+- A query to find the political party that has the most female TDs in it.
+- A query to get the average number of spoiled votes and the average turnout percentage for each constituency in Ireland.
+- A query to get the number of elected male TDs, female TDs and the percentage of elected TDs that are female.
 
 #### Query One
 #####Finding the Party with the most elected female TDs.
@@ -84,14 +88,14 @@ ORDER BY
 #####Getting the Average number of spoiled votes and the average turnout Percentage for the constituencies in Ireland.
 This query gets the average number of spoiled votes and the average turnout percentage for each constituency in the country.
 ```cypher
-MATCH // find the cunstituencies
+MATCH // find the cunstituencies in the graph
 	(c:Constituency)
 	
 RETURN // return the calculated average of spoiled votes and turnoutPercentage
 	AVG(toFloat(c.spoiledVotes)) AS Average_SpoiledVotes, 
 	AVG(toFloat(c.turnoutPercent)) AS Average_TurnoutPercent
 	
-ORDER BY // order the results in descending order
+ORDER BY // order the results in descending order by average spoiled votes
 	Average_SpoiledVotes DESC;
 ```
 
@@ -101,15 +105,15 @@ This query gets the number of elected males, elected females and calculates the 
 in the entire country.
 
 ```cypher
-MATCH // find the nodes
+MATCH // find the candidate nodes that are female & elected, and male & elected
 	(females:Candidate { gender: "Female", status: "elected"}), 
 	(males:Candidate {gender: "Male", status: "elected"})
 	
-WITH // set alias
+WITH // set alias' for the number of unique male candidates and female candidates
 	toFloat(COUNT(DISTINCT females)) AS Females,
 	toFloat(COUNT(DISTINCT males)) AS Males
 	
-RETURN // return the information and calulate percentage
+RETURN // return the number of male and female TDs and calulate the percentage of female TDs in Ireland.
 	Females AS ElectedFemales,
 	Males AS ElectedMales,
 	(Females / (Females + Males) * 100) AS PercentOfElectedAreFemales; 
