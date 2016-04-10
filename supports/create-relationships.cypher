@@ -12,3 +12,5 @@ MATCH (a:Candidate), (b:Party)
 WHERE a.party = b.shortName
 CREATE (a)-[r:WORKS_IN]->(b)
 RETURN a, r, b;
+
+// Switch to ROW view for this
