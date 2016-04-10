@@ -4,13 +4,35 @@
 ## Introduction
 This project is about representing data about the Irish General Election 2016, in a graph database using Neo4J.
 The database stores information on the constituencies in Ireland, as well as all of the Candidates that ran
-this year and their Partys.
+this year and their Parties.
 
 The aim of this project, aside from storing the information about the General Election, is also to explore
 some interesting queries that can be created using the data in the database.
 
 ## Database
-Explain how you created your database, and how information is represented in it.
+Explaining how I created the database, and how information is represented in it.
+
+At first, I searched the internet and started collecting data in spreadsheets. I used websites such as Wikipedia and RTE.ie (See References).
+Admittedly yes, this was a very slow approach. Once I had collected enough data on the General Election, I started editing the spreadsheets
+to format the data into Cypher queries so I could add the data into the Neo4j Database.
+
+If recreating the database: 
+	- Add the Parties and Constituencies First.
+	- Then add the massive Constituencies and Candidates script.
+	- Lastly, run the Relationships cypher script to set up the relationships.
+
+###Information Layout
+The graph database is layed out as follows:
+
+There are 3 Nodes and 2 Relationships.
+
+Candidate is the first Node, which has the Label Candidate and the properties:
+	- name: the name of the candidate.
+	- gender: the candidate's gender.
+	- party: the short hand abbreviation for the party they are in.
+	- status: their status in the General Election, either 'elected' or 'excluded'.
+	- con: the candidate's constituency.
+
 
 ## Queries
 Summarise your three queries here.
