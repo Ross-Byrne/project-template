@@ -12,7 +12,7 @@ Summarise your three queries here.
 Then explain them one by one in the following sections.
 
 #### Query One
-Finding the Party with the most elected female TDs.
+#####Finding the Party with the most elected female TDs.
 This query returns the name of the party with the most elected female TDs and the number of females in the party.
 I found this query interesting because I noticed it is quite obvious that there is a majority of Male TDs in each party.
 ```cypher
@@ -31,7 +31,7 @@ ORDER BY
 ```
 
 #### Query Two
-Getting the Average number of spoiled votes and the average turnout Percentage for the constituencies in Ireland.
+#####Getting the Average number of spoiled votes and the average turnout Percentage for the constituencies in Ireland.
 This query gets the average number of spoiled votes and the average turnout percentage for each constituency in the country.
 ```cypher
 MATCH // find the cunstituencies
@@ -46,7 +46,7 @@ ORDER BY // order the results in descending order
 ```
 
 #### Query Three
-Getting the number of elected Males, Females & Percentage of elected Female TDs in the country.
+#####Getting the number of elected Males, Females & Percentage of elected Female TDs in the country.
 This query gets the number of elected males, elected females and calculates the percentage of female candidates that are elected
 in the entire country.
 
