@@ -23,13 +23,16 @@ ORDER BY
 	COUNT(a) DESC LIMIT 1;
 ```
 
-#### Query two title
-This query retreives the Bacon number of an actor...
+#### Query two, Getting the Average number of spoiled votes and the average turnout percentage
+This query gets the average number of spoiled votes and the average turnout percentage for each constituency in the country.
 ```cypher
 MATCH
-	(Bacon)
-RETURN
-	Bacon;
+	(c:Constituency)
+RETURN 
+	AVG(toFloat(c.spoiledVotes)) AS Average_SpoiledVotes, 
+	AVG(toFloat(c.turnoutPercent)) AS Average_TurnoutPercent
+ORDER BY 
+	Average_SpoiledVotes DESC
 ```
 
 #### Query three title

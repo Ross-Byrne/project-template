@@ -1,9 +1,5 @@
-// Describe your query
-// at the start
-// in comments.
+// getting the average number of spoiled votes and turnoutPercent
 
-
-MATCH
-	(n)
-RETURN
-	n;
+MATCH(c:Constituency)
+RETURN AVG(toFloat(c.spoiledVotes)) AS Average_SpoiledVotes, AVG(toFloat(c.turnoutPercent)) AS Average_TurnoutPercent
+ORDER BY Average_SpoiledVotes DESC
